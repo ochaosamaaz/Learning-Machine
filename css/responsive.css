@@ -167,3 +167,51 @@
         padding: 20px;
     }
 }
+
+
+
+/* New sections responsive */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-list {
+        grid-template-columns: 1fr;
+    }
+
+    .math-lessons {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .phase-content ul {
+        grid-template-columns: 1fr;
+    }
+
+    .excel-table {
+        font-size: 0.8rem;
+    }
+
+    .excel-table th,
+    .excel-table td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .tip-item {
+        padding: 12px;
+    }
+
+    .tool-card {
+        padding: 20px;
+    }
+}

@@ -23,6 +23,8 @@
                 <li><a href="#courses" class="nav-link" data-i18n="nav_courses">Courses</a></li>
                 <li><a href="#english" class="nav-link" data-i18n="nav_english">English</a></li>
                 <li><a href="#coding" class="nav-link" data-i18n="nav_coding">Coding</a></li>
+                <li><a href="#bughunter" class="nav-link" data-i18n="nav_bughunter">Bug Hunter</a></li>
+                <li><a href="#excel" class="nav-link" data-i18n="nav_excel">Excel</a></li>
                 <li><a href="#math" class="nav-link" data-i18n="nav_math">Math</a></li>
                 <li><a href="#quiz" class="nav-link" data-i18n="nav_quiz">Quiz</a></li>
             </ul>
@@ -40,23 +42,25 @@
             </div>
         </div>
     </nav>
+
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title" data-i18n="hero_title">Learn Anything,<br><span class="gradient-text">Anytime, Anywhere</span></h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">Master English, Coding, Math and more with our interactive learning platform. Track your progress and achieve your goals.</p>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Master English, Coding, Bug Hunting, Excel, Math and more with our interactive learning platform.</p>
                 <div class="hero-buttons">
                     <a href="#courses" class="btn btn-primary" data-i18n="hero_start">Start Learning</a>
-                    <a href="#about" class="btn btn-outline" data-i18n="hero_explore">Explore Courses</a>
+                    <a href="#courses" class="btn btn-outline" data-i18n="hero_explore">Explore Courses</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">50+</span>
+                        <span class="stat-number">100+</span>
                         <span class="stat-label" data-i18n="stat_lessons">Lessons</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">4</span>
+                        <span class="stat-number">7</span>
                         <span class="stat-label" data-i18n="stat_subjects">Subjects</span>
                     </div>
                     <div class="stat-item">
@@ -66,25 +70,14 @@
                 </div>
             </div>
             <div class="hero-illustration">
-                <div class="floating-card card-1">
-                    <i class="fas fa-language"></i>
-                    <span>English</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-code"></i>
-                    <span>Coding</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-calculator"></i>
-                    <span>Math</span>
-                </div>
-                <div class="floating-card card-4">
-                    <i class="fas fa-brain"></i>
-                    <span>Logic</span>
-                </div>
+                <div class="floating-card card-1"><i class="fas fa-language"></i><span>English</span></div>
+                <div class="floating-card card-2"><i class="fas fa-code"></i><span>Coding</span></div>
+                <div class="floating-card card-3"><i class="fas fa-bug"></i><span>Bug Hunter</span></div>
+                <div class="floating-card card-4"><i class="fas fa-table"></i><span>Excel</span></div>
             </div>
         </div>
     </section>
+
 
     <!-- Courses Overview Section -->
     <section class="section courses-section" id="courses">
@@ -92,42 +85,62 @@
             <h2 class="section-title" data-i18n="courses_title">Our Courses</h2>
             <p class="section-subtitle" data-i18n="courses_subtitle">Choose your learning path and start your journey today</p>
             <div class="courses-grid">
-                <div class="course-card" onclick="navigateTo('english')">
+                <div class="course-card" data-target="english">
                     <div class="course-icon english-icon"><i class="fas fa-language"></i></div>
                     <h3 data-i18n="course_english_title">English</h3>
-                    <p data-i18n="course_english_desc">Learn vocabulary, grammar, conversation and more</p>
+                    <p data-i18n="course_english_desc">Vocabulary, grammar, conversation & pronunciation</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-book"></i> 25 <span data-i18n="lessons">Lessons</span></span>
+                        <span><i class="fas fa-clock"></i> 12h</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-english"></div></div>
+                </div>
+                <div class="course-card" data-target="coding">
+                    <div class="course-icon coding-icon"><i class="fas fa-code"></i></div>
+                    <h3 data-i18n="course_coding_title">Coding</h3>
+                    <p data-i18n="course_coding_desc">HTML, CSS, JavaScript, Python & more</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-book"></i> 30 <span data-i18n="lessons">Lessons</span></span>
+                        <span><i class="fas fa-clock"></i> 20h</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-coding"></div></div>
+                </div>
+                <div class="course-card" data-target="bughunter">
+                    <div class="course-icon bughunter-icon"><i class="fas fa-bug"></i></div>
+                    <h3 data-i18n="course_bughunter_title">Bug Hunter</h3>
+                    <p data-i18n="course_bughunter_desc">Cybersecurity roadmap from beginner to pro</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-book"></i> 20 <span data-i18n="lessons">Lessons</span></span>
+                        <span><i class="fas fa-clock"></i> 25h</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-bughunter"></div></div>
+                </div>
+                <div class="course-card" data-target="excel">
+                    <div class="course-icon excel-icon"><i class="fas fa-table"></i></div>
+                    <h3 data-i18n="course_excel_title">Excel</h3>
+                    <p data-i18n="course_excel_desc">Formulas, pivot tables, charts & automation</p>
                     <div class="course-meta">
                         <span><i class="fas fa-book"></i> 15 <span data-i18n="lessons">Lessons</span></span>
                         <span><i class="fas fa-clock"></i> 10h</span>
                     </div>
-                    <div class="progress-bar"><div class="progress-fill" id="progress-english"></div></div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-excel"></div></div>
                 </div>
-                <div class="course-card" onclick="navigateTo('coding')">
-                    <div class="course-icon coding-icon"><i class="fas fa-code"></i></div>
-                    <h3 data-i18n="course_coding_title">Coding</h3>
-                    <p data-i18n="course_coding_desc">HTML, CSS, JavaScript, Python fundamentals</p>
-                    <div class="course-meta">
-                        <span><i class="fas fa-book"></i> 20 <span data-i18n="lessons">Lessons</span></span>
-                        <span><i class="fas fa-clock"></i> 15h</span>
-                    </div>
-                    <div class="progress-bar"><div class="progress-fill" id="progress-coding"></div></div>
-                </div>
-                <div class="course-card" onclick="navigateTo('math')">
+                <div class="course-card" data-target="math">
                     <div class="course-icon math-icon"><i class="fas fa-calculator"></i></div>
                     <h3 data-i18n="course_math_title">Mathematics</h3>
-                    <p data-i18n="course_math_desc">Algebra, geometry, statistics and problem solving</p>
+                    <p data-i18n="course_math_desc">Algebra, geometry, statistics & problem solving</p>
                     <div class="course-meta">
-                        <span><i class="fas fa-book"></i> 12 <span data-i18n="lessons">Lessons</span></span>
-                        <span><i class="fas fa-clock"></i> 8h</span>
+                        <span><i class="fas fa-book"></i> 15 <span data-i18n="lessons">Lessons</span></span>
+                        <span><i class="fas fa-clock"></i> 10h</span>
                     </div>
                     <div class="progress-bar"><div class="progress-fill" id="progress-math"></div></div>
                 </div>
-                <div class="course-card" onclick="navigateTo('quiz')">
+                <div class="course-card" data-target="quiz">
                     <div class="course-icon quiz-icon"><i class="fas fa-brain"></i></div>
                     <h3 data-i18n="course_quiz_title">Quiz & Practice</h3>
-                    <p data-i18n="course_quiz_desc">Test your knowledge with interactive quizzes</p>
+                    <p data-i18n="course_quiz_desc">Test your knowledge with 100+ questions</p>
                     <div class="course-meta">
-                        <span><i class="fas fa-trophy"></i> 30 <span data-i18n="questions">Questions</span></span>
+                        <span><i class="fas fa-trophy"></i> 100+ <span data-i18n="questions">Questions</span></span>
                         <span><i class="fas fa-star"></i> Fun</span>
                     </div>
                     <div class="progress-bar"><div class="progress-fill" id="progress-quiz"></div></div>
@@ -135,6 +148,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- English Learning Section -->
     <section class="section learning-section" id="english">
@@ -145,48 +159,33 @@
                 <button class="tab-btn active" data-tab="vocabulary" data-i18n="tab_vocab">Vocabulary</button>
                 <button class="tab-btn" data-tab="grammar" data-i18n="tab_grammar">Grammar</button>
                 <button class="tab-btn" data-tab="conversation" data-i18n="tab_conversation">Conversation</button>
+                <button class="tab-btn" data-tab="idioms" data-i18n="tab_idioms">Idioms</button>
             </div>
             <!-- Vocabulary Tab -->
             <div class="tab-content active" id="tab-vocabulary">
                 <div class="vocab-grid">
-                    <div class="vocab-card" onclick="speakWord('Hello')">
-                        <div class="vocab-word">Hello</div>
-                        <div class="vocab-translation">Halo</div>
-                        <div class="vocab-example">"Hello, how are you?"</div>
-                        <i class="fas fa-volume-up vocab-speak"></i>
-                    </div>
-                    <div class="vocab-card" onclick="speakWord('Thank you')">
-                        <div class="vocab-word">Thank you</div>
-                        <div class="vocab-translation">Terima kasih</div>
-                        <div class="vocab-example">"Thank you very much!"</div>
-                        <i class="fas fa-volume-up vocab-speak"></i>
-                    </div>
-                    <div class="vocab-card" onclick="speakWord('Good morning')">
-                        <div class="vocab-word">Good morning</div>
-                        <div class="vocab-translation">Selamat pagi</div>
-                        <div class="vocab-example">"Good morning, teacher!"</div>
-                        <i class="fas fa-volume-up vocab-speak"></i>
-                    </div>
-                    <div class="vocab-card" onclick="speakWord('Excuse me')">
-                        <div class="vocab-word">Excuse me</div>
-                        <div class="vocab-translation">Permisi</div>
-                        <div class="vocab-example">"Excuse me, where is the library?"</div>
-                        <i class="fas fa-volume-up vocab-speak"></i>
-                    </div>
-                    <div class="vocab-card" onclick="speakWord('Beautiful')">
-                        <div class="vocab-word">Beautiful</div>
-                        <div class="vocab-translation">Cantik / Indah</div>
-                        <div class="vocab-example">"What a beautiful day!"</div>
-                        <i class="fas fa-volume-up vocab-speak"></i>
-                    </div>
-                    <div class="vocab-card" onclick="speakWord('Knowledge')">
-                        <div class="vocab-word">Knowledge</div>
-                        <div class="vocab-translation">Pengetahuan</div>
-                        <div class="vocab-example">"Knowledge is power."</div>
-                        <i class="fas fa-volume-up vocab-speak"></i>
-                    </div>
+                    <div class="vocab-card" onclick="speakWord('Hello')"><div class="vocab-word">Hello</div><div class="vocab-translation">Halo</div><div class="vocab-example">"Hello, how are you?"</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Thank you')"><div class="vocab-word">Thank you</div><div class="vocab-translation">Terima kasih</div><div class="vocab-example">"Thank you very much!"</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Good morning')"><div class="vocab-word">Good morning</div><div class="vocab-translation">Selamat pagi</div><div class="vocab-example">"Good morning, teacher!"</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Excuse me')"><div class="vocab-word">Excuse me</div><div class="vocab-translation">Permisi</div><div class="vocab-example">"Excuse me, where is the library?"</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Beautiful')"><div class="vocab-word">Beautiful</div><div class="vocab-translation">Cantik / Indah</div><div class="vocab-example">"What a beautiful day!"</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Knowledge')"><div class="vocab-word">Knowledge</div><div class="vocab-translation">Pengetahuan</div><div class="vocab-example">"Knowledge is power."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Opportunity')"><div class="vocab-word">Opportunity</div><div class="vocab-translation">Kesempatan</div><div class="vocab-example">"This is a great opportunity."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Determination')"><div class="vocab-word">Determination</div><div class="vocab-translation">Tekad / Keteguhan</div><div class="vocab-example">"His determination impressed everyone."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Experience')"><div class="vocab-word">Experience</div><div class="vocab-translation">Pengalaman</div><div class="vocab-example">"Experience is the best teacher."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Environment')"><div class="vocab-word">Environment</div><div class="vocab-translation">Lingkungan</div><div class="vocab-example">"We must protect our environment."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Achievement')"><div class="vocab-word">Achievement</div><div class="vocab-translation">Pencapaian</div><div class="vocab-example">"What a great achievement!"</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Responsibility')"><div class="vocab-word">Responsibility</div><div class="vocab-translation">Tanggung jawab</div><div class="vocab-example">"It's your responsibility."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Nevertheless')"><div class="vocab-word">Nevertheless</div><div class="vocab-translation">Namun demikian</div><div class="vocab-example">"It was hard; nevertheless, he succeeded."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Collaborate')"><div class="vocab-word">Collaborate</div><div class="vocab-translation">Berkolaborasi</div><div class="vocab-example">"Let's collaborate on this project."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Innovative')"><div class="vocab-word">Innovative</div><div class="vocab-translation">Inovatif</div><div class="vocab-example">"We need innovative solutions."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Appreciate')"><div class="vocab-word">Appreciate</div><div class="vocab-translation">Menghargai</div><div class="vocab-example">"I really appreciate your help."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Significant')"><div class="vocab-word">Significant</div><div class="vocab-translation">Signifikan / Penting</div><div class="vocab-example">"This is a significant improvement."</div><i class="fas fa-volume-up vocab-speak"></i></div>
+                    <div class="vocab-card" onclick="speakWord('Enthusiasm')"><div class="vocab-word">Enthusiasm</div><div class="vocab-translation">Antusiasme</div><div class="vocab-example">"She showed great enthusiasm."</div><i class="fas fa-volume-up vocab-speak"></i></div>
                 </div>
             </div>
+
+
             <!-- Grammar Tab -->
             <div class="tab-content" id="tab-grammar">
                 <div class="grammar-lessons">
@@ -195,19 +194,19 @@
                         <p data-i18n="grammar_present_desc">Used for habits, facts, and regular actions</p>
                         <div class="grammar-example">
                             <strong>Structure:</strong> Subject + Verb (s/es) + Object<br>
-                            <strong>Example:</strong> "She <em>reads</em> books every day."<br>
-                            <strong>Negative:</strong> "She <em>does not read</em> books."<br>
-                            <strong>Question:</strong> "<em>Does</em> she <em>read</em> books?"
+                            <strong>(+)</strong> "She <em>reads</em> books every day."<br>
+                            <strong>(-)</strong> "She <em>does not read</em> books."<br>
+                            <strong>(?)</strong> "<em>Does</em> she <em>read</em> books?"
                         </div>
                     </div>
                     <div class="grammar-card">
                         <h4>Simple Past Tense</h4>
                         <p data-i18n="grammar_past_desc">Used for completed actions in the past</p>
                         <div class="grammar-example">
-                            <strong>Structure:</strong> Subject + Verb (past form) + Object<br>
-                            <strong>Example:</strong> "I <em>visited</em> Jakarta last week."<br>
-                            <strong>Negative:</strong> "I <em>did not visit</em> Jakarta."<br>
-                            <strong>Question:</strong> "<em>Did</em> you <em>visit</em> Jakarta?"
+                            <strong>Structure:</strong> Subject + Verb2 (past form) + Object<br>
+                            <strong>(+)</strong> "I <em>visited</em> Jakarta last week."<br>
+                            <strong>(-)</strong> "I <em>did not visit</em> Jakarta."<br>
+                            <strong>(?)</strong> "<em>Did</em> you <em>visit</em> Jakarta?"
                         </div>
                     </div>
                     <div class="grammar-card">
@@ -215,13 +214,54 @@
                         <p data-i18n="grammar_continuous_desc">Used for actions happening right now</p>
                         <div class="grammar-example">
                             <strong>Structure:</strong> Subject + is/am/are + Verb-ing<br>
-                            <strong>Example:</strong> "They <em>are studying</em> English now."<br>
-                            <strong>Negative:</strong> "They <em>are not studying</em>."<br>
-                            <strong>Question:</strong> "<em>Are</em> they <em>studying</em>?"
+                            <strong>(+)</strong> "They <em>are studying</em> English now."<br>
+                            <strong>(-)</strong> "They <em>are not studying</em>."<br>
+                            <strong>(?)</strong> "<em>Are</em> they <em>studying</em>?"
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4>Present Perfect Tense</h4>
+                        <p>Used for past actions with present relevance</p>
+                        <div class="grammar-example">
+                            <strong>Structure:</strong> Subject + have/has + Verb3 (past participle)<br>
+                            <strong>(+)</strong> "I <em>have finished</em> my homework."<br>
+                            <strong>(-)</strong> "I <em>have not finished</em> yet."<br>
+                            <strong>(?)</strong> "<em>Have</em> you <em>finished</em>?"
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4>Future Tense (Will)</h4>
+                        <p>Used for predictions, promises, and spontaneous decisions</p>
+                        <div class="grammar-example">
+                            <strong>Structure:</strong> Subject + will + Verb (base form)<br>
+                            <strong>(+)</strong> "I <em>will help</em> you tomorrow."<br>
+                            <strong>(-)</strong> "She <em>will not come</em> to the party."<br>
+                            <strong>(?)</strong> "<em>Will</em> they <em>join</em> us?"
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4>Passive Voice</h4>
+                        <p>Used when the action is more important than who did it</p>
+                        <div class="grammar-example">
+                            <strong>Structure:</strong> Object + to be + Verb3 (+ by subject)<br>
+                            <strong>Active:</strong> "The chef <em>cooks</em> the food."<br>
+                            <strong>Passive:</strong> "The food <em>is cooked</em> by the chef."<br>
+                            <strong>Past:</strong> "The book <em>was written</em> in 2020."
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4>Conditional Sentences</h4>
+                        <p>Used for hypothetical situations</p>
+                        <div class="grammar-example">
+                            <strong>Type 1 (Real):</strong> "If it <em>rains</em>, I <em>will stay</em> home."<br>
+                            <strong>Type 2 (Unreal):</strong> "If I <em>were</em> rich, I <em>would travel</em>."<br>
+                            <strong>Type 3 (Past):</strong> "If I <em>had studied</em>, I <em>would have passed</em>."
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <!-- Conversation Tab -->
             <div class="tab-content" id="tab-conversation">
                 <div class="conversation-list">
@@ -232,6 +272,8 @@
                             <div class="dialogue-line speaker-b"><strong>You:</strong> Yes, I'd like a table for two, please.</div>
                             <div class="dialogue-line speaker-a"><strong>Waiter:</strong> Of course. Would you like to see the menu?</div>
                             <div class="dialogue-line speaker-b"><strong>You:</strong> Yes, please. And can I have some water?</div>
+                            <div class="dialogue-line speaker-a"><strong>Waiter:</strong> Here's the menu. Are you ready to order?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> I'll have the grilled chicken, please.</div>
                         </div>
                     </div>
                     <div class="conversation-card">
@@ -241,12 +283,103 @@
                             <div class="dialogue-line speaker-a"><strong>Person:</strong> Go straight ahead, then turn left at the traffic light.</div>
                             <div class="dialogue-line speaker-b"><strong>You:</strong> How far is it from here?</div>
                             <div class="dialogue-line speaker-a"><strong>Person:</strong> About 10 minutes on foot.</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> Thank you very much!</div>
+                            <div class="dialogue-line speaker-a"><strong>Person:</strong> You're welcome. Have a good day!</div>
+                        </div>
+                    </div>
+                    <div class="conversation-card">
+                        <h4><i class="fas fa-comments"></i> Job Interview</h4>
+                        <div class="dialogue">
+                            <div class="dialogue-line speaker-a"><strong>Interviewer:</strong> Tell me about yourself.</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> I'm a fresh graduate from computer science. I'm passionate about web development.</div>
+                            <div class="dialogue-line speaker-a"><strong>Interviewer:</strong> What are your strengths?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> I'm a fast learner, detail-oriented, and I work well in a team.</div>
+                            <div class="dialogue-line speaker-a"><strong>Interviewer:</strong> Why do you want to work here?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> I admire your company's innovation and I want to grow with the team.</div>
+                        </div>
+                    </div>
+                    <div class="conversation-card">
+                        <h4><i class="fas fa-comments"></i> Shopping</h4>
+                        <div class="dialogue">
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> Hi, do you have this shirt in a medium size?</div>
+                            <div class="dialogue-line speaker-a"><strong>Staff:</strong> Let me check. Yes, we have it in blue and black.</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> How much is it?</div>
+                            <div class="dialogue-line speaker-a"><strong>Staff:</strong> It's $25. Would you like to try it on?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> Yes please. Where's the fitting room?</div>
+                            <div class="dialogue-line speaker-a"><strong>Staff:</strong> Right over there, on the left.</div>
+                        </div>
+                    </div>
+                    <div class="conversation-card">
+                        <h4><i class="fas fa-comments"></i> At the Doctor</h4>
+                        <div class="dialogue">
+                            <div class="dialogue-line speaker-a"><strong>Doctor:</strong> What seems to be the problem?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> I've been having headaches for the past three days.</div>
+                            <div class="dialogue-line speaker-a"><strong>Doctor:</strong> How severe is the pain, on a scale of 1 to 10?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> About a 6. It gets worse in the evening.</div>
+                            <div class="dialogue-line speaker-a"><strong>Doctor:</strong> I'll prescribe some medicine. Get plenty of rest.</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> Thank you, doctor. How often should I take the medicine?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Idioms Tab -->
+            <div class="tab-content" id="tab-idioms">
+                <div class="grammar-lessons">
+                    <div class="grammar-card">
+                        <h4><i class="fas fa-lightbulb"></i> Break the ice</h4>
+                        <p><strong>Meaning:</strong> To initiate conversation in a social setting</p>
+                        <div class="grammar-example">
+                            <strong>Example:</strong> "He told a joke to <em>break the ice</em> at the meeting."<br>
+                            <strong>Indonesian:</strong> Mencairkan suasana
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4><i class="fas fa-lightbulb"></i> Hit the nail on the head</h4>
+                        <p><strong>Meaning:</strong> To be exactly right about something</p>
+                        <div class="grammar-example">
+                            <strong>Example:</strong> "You <em>hit the nail on the head</em> with that analysis."<br>
+                            <strong>Indonesian:</strong> Tepat sasaran
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4><i class="fas fa-lightbulb"></i> Piece of cake</h4>
+                        <p><strong>Meaning:</strong> Something very easy to do</p>
+                        <div class="grammar-example">
+                            <strong>Example:</strong> "The exam was a <em>piece of cake</em>."<br>
+                            <strong>Indonesian:</strong> Sangat mudah
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4><i class="fas fa-lightbulb"></i> Burn the midnight oil</h4>
+                        <p><strong>Meaning:</strong> To work or study late into the night</p>
+                        <div class="grammar-example">
+                            <strong>Example:</strong> "I had to <em>burn the midnight oil</em> to finish the project."<br>
+                            <strong>Indonesian:</strong> Begadang untuk bekerja/belajar
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4><i class="fas fa-lightbulb"></i> Under the weather</h4>
+                        <p><strong>Meaning:</strong> Feeling ill or sick</p>
+                        <div class="grammar-example">
+                            <strong>Example:</strong> "I'm feeling <em>under the weather</em> today."<br>
+                            <strong>Indonesian:</strong> Kurang enak badan
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4><i class="fas fa-lightbulb"></i> Let the cat out of the bag</h4>
+                        <p><strong>Meaning:</strong> To reveal a secret accidentally</p>
+                        <div class="grammar-example">
+                            <strong>Example:</strong> "She <em>let the cat out of the bag</em> about the surprise party."<br>
+                            <strong>Indonesian:</strong> Membocorkan rahasia
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Coding Learning Section -->
     <section class="section learning-section" id="coding">
@@ -254,155 +387,842 @@
             <h2 class="section-title" data-i18n="coding_title">Coding Learning</h2>
             <p class="section-subtitle" data-i18n="coding_subtitle">Learn to code from scratch</p>
             <div class="tabs">
-                <button class="tab-btn active" data-tab="html-css" data-i18n="tab_html">HTML & CSS</button>
-                <button class="tab-btn" data-tab="javascript" data-i18n="tab_js">JavaScript</button>
-                <button class="tab-btn" data-tab="python" data-i18n="tab_python">Python</button>
+                <button class="tab-btn active" data-tab="html-css">HTML & CSS</button>
+                <button class="tab-btn" data-tab="javascript">JavaScript</button>
+                <button class="tab-btn" data-tab="python">Python</button>
+                <button class="tab-btn" data-tab="git">Git & GitHub</button>
             </div>
             <!-- HTML & CSS Tab -->
             <div class="tab-content active" id="tab-html-css">
                 <div class="code-lessons">
                     <div class="code-card">
-                        <h4><i class="fas fa-code"></i> HTML Basics</h4>
-                        <p data-i18n="html_intro">HTML is the standard markup language for creating web pages.</p>
-                        <div class="code-block">
-                            <div class="code-header"><span>HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+                        <h4><i class="fas fa-code"></i> HTML Basics - Structure</h4>
+                        <p>HTML is the skeleton of every web page. Every page starts with this structure.</p>
+                        <div class="code-block"><div class="code-header"><span>HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-    &lt;title&gt;My First Page&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is my first website.&lt;/p&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href="#"&gt;Home&lt;/a&gt;
+            &lt;a href="#"&gt;About&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h1&gt;Welcome!&lt;/h1&gt;
+        &lt;p&gt;This is my first website.&lt;/p&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;&lt;p&gt;&amp;copy; 2024&lt;/p&gt;&lt;/footer&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                        </div>
+&lt;/html&gt;</code></pre></div>
                     </div>
                     <div class="code-card">
-                        <h4><i class="fas fa-palette"></i> CSS Styling</h4>
-                        <p data-i18n="css_intro">CSS is used to style and layout web pages.</p>
-                        <div class="code-block">
-                            <div class="code-header"><span>CSS</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
-<pre><code>body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+                        <h4><i class="fas fa-list"></i> HTML - Forms & Input</h4>
+                        <p>Forms allow users to submit data. Essential for login pages, registration, etc.</p>
+                        <div class="code-block"><div class="code-header"><span>HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required&gt;
+
+    &lt;label for="role"&gt;Role:&lt;/label&gt;
+    &lt;select id="role" name="role"&gt;
+        &lt;option value="user"&gt;User&lt;/option&gt;
+        &lt;option value="admin"&gt;Admin&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;button type="submit"&gt;Login&lt;/button&gt;
+&lt;/form&gt;</code></pre></div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-palette"></i> CSS - Flexbox Layout</h4>
+                        <p>Flexbox makes it easy to align and distribute space among items in a container.</p>
+                        <div class="code-block"><div class="code-header"><span>CSS</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>/* Navbar using Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333;
+    color: white;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
+/* Card Grid using Flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+.card {
+    flex: 1 1 300px;
     padding: 20px;
-}</code></pre>
-                        </div>
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}</code></pre></div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-th"></i> CSS - Grid Layout</h4>
+                        <p>CSS Grid is perfect for complex two-dimensional layouts.</p>
+                        <div class="code-block"><div class="code-header"><span>CSS</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>/* Responsive Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "sidebar header header"
+        "sidebar main main"
+        "sidebar footer footer";
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-rows: 60px 1fr 40px;
+    height: 100vh;
+}
+
+.sidebar { grid-area: sidebar; }
+.header  { grid-area: header; }
+.main    { grid-area: main; }
+.footer  { grid-area: footer; }</code></pre></div>
                     </div>
                 </div>
             </div>
+
+
             <!-- JavaScript Tab -->
             <div class="tab-content" id="tab-javascript">
                 <div class="code-lessons">
                     <div class="code-card">
-                        <h4><i class="fas fa-js"></i> Variables & Data Types</h4>
-                        <p data-i18n="js_vars_desc">JavaScript variables store data values.</p>
-                        <div class="code-block">
-                            <div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
-<pre><code>// Variables
-let name = "John";
-const age = 25;
-let isStudent = true;
+                        <h4><i class="fab fa-js"></i> Variables & Data Types</h4>
+                        <p>JavaScript has three ways to declare variables: var, let, and const.</p>
+                        <div class="code-block"><div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>// let - can be reassigned
+let score = 0;
+score = 100; // OK
 
-// Arrays
-let fruits = ["Apple", "Banana", "Orange"];
+// const - cannot be reassigned
+const API_URL = "https://api.example.com";
+// API_URL = "other"; // ERROR!
 
-// Objects
-let person = {
-    name: "John",
-    age: 25,
-    city: "Jakarta"
-};
-
-console.log(person.name); // "John"</code></pre>
-                        </div>
+// Data Types
+let name = "John";        // String
+let age = 25;             // Number
+let isActive = true;      // Boolean
+let items = [1, 2, 3];    // Array
+let user = {name: "John"}; // Object
+let nothing = null;       // Null
+let x;                    // Undefined</code></pre></div>
                     </div>
                     <div class="code-card">
-                        <h4><i class="fas fa-cogs"></i> Functions</h4>
-                        <p data-i18n="js_func_desc">Functions are reusable blocks of code.</p>
-                        <div class="code-block">
-                            <div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
-<pre><code>// Function declaration
-function greet(name) {
-    return `Hello, ${name}!`;
+                        <h4><i class="fas fa-cogs"></i> Functions & Arrow Functions</h4>
+                        <p>Functions are reusable blocks of code. Arrow functions are shorter syntax.</p>
+                        <div class="code-block"><div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>// Regular function
+function calculateArea(width, height) {
+    return width * height;
 }
 
 // Arrow function
-const add = (a, b) => a + b;
+const multiply = (a, b) => a * b;
 
-// Using functions
-console.log(greet("World")); // "Hello, World!"
-console.log(add(5, 3));      // 8</code></pre>
-                        </div>
+// Function with default parameters
+const greet = (name = "World") => `Hello, ${name}!`;
+
+// Higher-order function
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2); // [2, 4, 6, 8, 10]
+const evens = numbers.filter(n => n % 2 === 0); // [2, 4]
+const sum = numbers.reduce((acc, n) => acc + n, 0); // 15</code></pre></div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-network-wired"></i> DOM Manipulation</h4>
+                        <p>The DOM allows JavaScript to interact with HTML elements.</p>
+                        <div class="code-block"><div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>// Select elements
+const title = document.getElementById('title');
+const buttons = document.querySelectorAll('.btn');
+
+// Modify content & style
+title.textContent = "New Title";
+title.style.color = "blue";
+title.classList.add('highlight');
+
+// Create elements
+const newDiv = document.createElement('div');
+newDiv.innerHTML = '&lt;p&gt;Hello!&lt;/p&gt;';
+document.body.appendChild(newDiv);
+
+// Event listeners
+const btn = document.querySelector('#submit');
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Button clicked!');
+});</code></pre></div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-cloud"></i> Fetch API & Async/Await</h4>
+                        <p>Modern way to make HTTP requests and handle asynchronous operations.</p>
+                        <div class="code-block"><div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>// Fetch API with async/await
+async function getUsers() {
+    try {
+        const response = await fetch('https://api.example.com/users');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// POST request
+async function createUser(userData) {
+    const response = await fetch('/api/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(userData)
+    });
+    return await response.json();
+}</code></pre></div>
                     </div>
                 </div>
             </div>
+
+
             <!-- Python Tab -->
             <div class="tab-content" id="tab-python">
                 <div class="code-lessons">
                     <div class="code-card">
                         <h4><i class="fab fa-python"></i> Python Basics</h4>
-                        <p data-i18n="python_intro">Python is a beginner-friendly programming language.</p>
-                        <div class="code-block">
-                            <div class="code-header"><span>Python</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
-<pre><code># Variables
-name = "John"
-age = 25
-is_student = True
+                        <p>Python is a powerful, beginner-friendly language used for web, AI, automation & more.</p>
+                        <div class="code-block"><div class="code-header"><span>Python</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code># Variables & Data Types
+name = "John"           # String
+age = 25                # Integer
+height = 175.5          # Float
+is_student = True       # Boolean
+skills = ["Python", "JS"]  # List
+person = {"name": "John", "age": 25}  # Dictionary
 
-# Lists
-fruits = ["Apple", "Banana", "Orange"]
+# String formatting (f-strings)
+print(f"Hello, {name}! You are {age} years old.")
 
-# Dictionary
-person = {
-    "name": "John",
-    "age": 25,
-    "city": "Jakarta"
-}
-
-print(f"Hello, {name}!")</code></pre>
-                        </div>
+# Type conversion
+num_str = "42"
+num_int = int(num_str)  # Convert string to int
+print(type(num_int))    # &lt;class 'int'&gt;</code></pre></div>
                     </div>
                     <div class="code-card">
-                        <h4><i class="fas fa-repeat"></i> Loops & Conditions</h4>
-                        <p data-i18n="python_loops_desc">Control flow in Python.</p>
-                        <div class="code-block">
-                            <div class="code-header"><span>Python</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
-<pre><code># If-else condition
+                        <h4><i class="fas fa-repeat"></i> Control Flow & Loops</h4>
+                        <p>Control the flow of your program with conditions and loops.</p>
+                        <div class="code-block"><div class="code-header"><span>Python</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code># If-elif-else
 score = 85
 if score >= 90:
-    print("Excellent!")
+    grade = "A"
+elif score >= 80:
+    grade = "B"
 elif score >= 70:
-    print("Good job!")
+    grade = "C"
 else:
-    print("Keep trying!")
+    grade = "D"
 
-# For loop
-for i in range(5):
-    print(f"Number: {i}")
+# For loop with enumerate
+fruits = ["Apple", "Banana", "Cherry"]
+for index, fruit in enumerate(fruits):
+    print(f"{index + 1}. {fruit}")
 
-# While loop
+# List comprehension
+squares = [x**2 for x in range(1, 11)]
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# While loop with break
 count = 0
-while count < 3:
-    print(f"Count: {count}")
-    count += 1</code></pre>
+while True:
+    count += 1
+    if count >= 5:
+        break
+    print(count)</code></pre></div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-cube"></i> Functions & Classes (OOP)</h4>
+                        <p>Organize your code with functions and object-oriented programming.</p>
+                        <div class="code-block"><div class="code-header"><span>Python</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code># Functions with default params
+def calculate_bmi(weight, height_m):
+    """Calculate Body Mass Index"""
+    return round(weight / (height_m ** 2), 1)
+
+print(calculate_bmi(70, 1.75))  # 22.9
+
+# Class (OOP)
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+        self.courses = []
+
+    def enroll(self, course):
+        self.courses.append(course)
+        return f"{self.name} enrolled in {course}"
+
+    def __str__(self):
+        return f"Student({self.name}, Grade {self.grade})"
+
+# Usage
+student = Student("Alice", 10)
+print(student.enroll("Math"))
+print(student)</code></pre></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Git Tab -->
+            <div class="tab-content" id="tab-git">
+                <div class="code-lessons">
+                    <div class="code-card">
+                        <h4><i class="fab fa-git-alt"></i> Git Basics - Essential Commands</h4>
+                        <p>Git is a version control system. Essential for every developer.</p>
+                        <div class="code-block"><div class="code-header"><span>Bash</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code># Initialize a new repository
+git init
+
+# Check status
+git status
+
+# Stage files
+git add .                    # Add all files
+git add index.html           # Add specific file
+
+# Commit changes
+git commit -m "feat: add login page"
+
+# View history
+git log --oneline
+
+# Create & switch branch
+git branch feature-login
+git checkout feature-login
+# OR shortcut:
+git checkout -b feature-login
+
+# Merge branch
+git checkout main
+git merge feature-login</code></pre></div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fab fa-github"></i> GitHub - Remote Repository</h4>
+                        <p>Push your code to GitHub for collaboration and backup.</p>
+                        <div class="code-block"><div class="code-header"><span>Bash</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code># Connect to remote
+git remote add origin https://github.com/user/repo.git
+
+# Push to GitHub
+git push -u origin main
+
+# Pull latest changes
+git pull origin main
+
+# Clone a repository
+git clone https://github.com/user/repo.git
+
+# Fork workflow (contributing to open source)
+# 1. Fork the repo on GitHub
+# 2. Clone your fork
+git clone https://github.com/YOUR-USERNAME/repo.git
+# 3. Create branch, make changes, push
+git checkout -b fix-bug
+git add . && git commit -m "fix: resolve login issue"
+git push origin fix-bug
+# 4. Create Pull Request on GitHub</code></pre></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bug Hunter / Cybersecurity Roadmap Section -->
+    <section class="section learning-section" id="bughunter">
+        <div class="container">
+            <h2 class="section-title" data-i18n="bughunter_title">Bug Hunter Roadmap</h2>
+            <p class="section-subtitle" data-i18n="bughunter_subtitle">Complete path from beginner to professional bug bounty hunter</p>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="bh-roadmap">Roadmap</button>
+                <button class="tab-btn" data-tab="bh-tools">Tools</button>
+                <button class="tab-btn" data-tab="bh-vulns">Vulnerabilities</button>
+                <button class="tab-btn" data-tab="bh-platforms">Platforms</button>
+            </div>
+            <!-- Roadmap Tab -->
+            <div class="tab-content active" id="tab-bh-roadmap">
+                <div class="roadmap-container">
+                    <div class="roadmap-phase">
+                        <div class="phase-header phase-beginner"><span class="phase-num">1</span><h4>Foundation (Month 1-2)</h4></div>
+                        <div class="phase-content">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Learn HTML, CSS, JavaScript basics</li>
+                                <li><i class="fas fa-check"></i> Understand HTTP/HTTPS protocol</li>
+                                <li><i class="fas fa-check"></i> Learn networking fundamentals (TCP/IP, DNS, Ports)</li>
+                                <li><i class="fas fa-check"></i> Linux command line basics</li>
+                                <li><i class="fas fa-check"></i> Understand how web applications work (client-server)</li>
+                                <li><i class="fas fa-check"></i> Learn about cookies, sessions, tokens</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="roadmap-phase">
+                        <div class="phase-header phase-intermediate"><span class="phase-num">2</span><h4>Learning Security (Month 3-4)</h4></div>
+                        <div class="phase-content">
+                            <ul>
+                                <li><i class="fas fa-check"></i> OWASP Top 10 vulnerabilities</li>
+                                <li><i class="fas fa-check"></i> Practice on TryHackMe & HackTheBox</li>
+                                <li><i class="fas fa-check"></i> Learn Burp Suite basics</li>
+                                <li><i class="fas fa-check"></i> SQL Injection (SQLi) techniques</li>
+                                <li><i class="fas fa-check"></i> Cross-Site Scripting (XSS) types</li>
+                                <li><i class="fas fa-check"></i> Authentication & Authorization flaws</li>
+                                <li><i class="fas fa-check"></i> Study real bug bounty reports (HackerOne)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="roadmap-phase">
+                        <div class="phase-header phase-advanced"><span class="phase-num">3</span><h4>Advanced Skills (Month 5-8)</h4></div>
+                        <div class="phase-content">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Server Side Request Forgery (SSRF)</li>
+                                <li><i class="fas fa-check"></i> Insecure Direct Object Reference (IDOR)</li>
+                                <li><i class="fas fa-check"></i> Remote Code Execution (RCE)</li>
+                                <li><i class="fas fa-check"></i> Business logic vulnerabilities</li>
+                                <li><i class="fas fa-check"></i> API security testing</li>
+                                <li><i class="fas fa-check"></i> Advanced recon & subdomain enumeration</li>
+                                <li><i class="fas fa-check"></i> Automation with Python scripts</li>
+                                <li><i class="fas fa-check"></i> Mobile app security basics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="roadmap-phase">
+                        <div class="phase-header phase-pro"><span class="phase-num">4</span><h4>Professional (Month 9+)</h4></div>
+                        <div class="phase-content">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Start bug bounty on HackerOne/Bugcrowd</li>
+                                <li><i class="fas fa-check"></i> Build your own recon methodology</li>
+                                <li><i class="fas fa-check"></i> Chain vulnerabilities for higher impact</li>
+                                <li><i class="fas fa-check"></i> Get certifications (eJPT, OSCP, eWPTX)</li>
+                                <li><i class="fas fa-check"></i> Contribute to security community</li>
+                                <li><i class="fas fa-check"></i> Write detailed vulnerability reports</li>
+                                <li><i class="fas fa-check"></i> Specialize (Web, Mobile, Cloud, IoT)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Tools Tab -->
+            <div class="tab-content" id="tab-bh-tools">
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fas fa-spider"></i></div>
+                        <h4>Burp Suite</h4>
+                        <p>Web proxy for intercepting and modifying HTTP requests. The #1 tool for web app testing.</p>
+                        <span class="tool-tag">Essential</span>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fas fa-search"></i></div>
+                        <h4>Nmap</h4>
+                        <p>Network scanner for discovering hosts, open ports, and services running on targets.</p>
+                        <span class="tool-tag">Recon</span>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fas fa-terminal"></i></div>
+                        <h4>SQLMap</h4>
+                        <p>Automated SQL injection tool. Detects and exploits SQL injection vulnerabilities.</p>
+                        <span class="tool-tag">Exploitation</span>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fas fa-globe"></i></div>
+                        <h4>Subfinder</h4>
+                        <p>Fast subdomain enumeration tool. Discovers subdomains using passive sources.</p>
+                        <span class="tool-tag">Recon</span>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fas fa-folder-open"></i></div>
+                        <h4>Dirsearch</h4>
+                        <p>Web path discovery tool. Finds hidden directories and files on web servers.</p>
+                        <span class="tool-tag">Recon</span>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fas fa-bolt"></i></div>
+                        <h4>Nuclei</h4>
+                        <p>Fast vulnerability scanner using templates. Automates detection of known vulnerabilities.</p>
+                        <span class="tool-tag">Scanning</span>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fas fa-link"></i></div>
+                        <h4>httpx</h4>
+                        <p>Fast HTTP probing tool. Checks which hosts are alive and captures responses.</p>
+                        <span class="tool-tag">Recon</span>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><i class="fab fa-linux"></i></div>
+                        <h4>Kali Linux</h4>
+                        <p>Penetration testing OS with 600+ pre-installed security tools.</p>
+                        <span class="tool-tag">Platform</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Vulnerabilities Tab -->
+            <div class="tab-content" id="tab-bh-vulns">
+                <div class="vuln-list">
+                    <div class="vuln-card vuln-critical">
+                        <div class="vuln-severity">CRITICAL</div>
+                        <h4>SQL Injection (SQLi)</h4>
+                        <p>Injecting SQL code into queries to access/modify database.</p>
+                        <div class="code-block"><div class="code-header"><span>Example Payload</span></div>
+<pre><code>' OR 1=1 --
+' UNION SELECT username,password FROM users --
+admin' AND 1=1 --</code></pre></div>
+                        <p class="vuln-impact"><strong>Impact:</strong> Data breach, authentication bypass, full database access</p>
+                    </div>
+                    <div class="vuln-card vuln-high">
+                        <div class="vuln-severity">HIGH</div>
+                        <h4>Cross-Site Scripting (XSS)</h4>
+                        <p>Injecting malicious scripts that execute in victim's browser.</p>
+                        <div class="code-block"><div class="code-header"><span>Types of XSS</span></div>
+<pre><code>Reflected: &lt;script&gt;alert('XSS')&lt;/script&gt;
+Stored: Saved in database, executes for all users
+DOM-based: Manipulates client-side JavaScript</code></pre></div>
+                        <p class="vuln-impact"><strong>Impact:</strong> Session hijacking, cookie theft, phishing</p>
+                    </div>
+                    <div class="vuln-card vuln-high">
+                        <div class="vuln-severity">HIGH</div>
+                        <h4>Server-Side Request Forgery (SSRF)</h4>
+                        <p>Making the server send requests to internal resources.</p>
+                        <div class="code-block"><div class="code-header"><span>Example</span></div>
+<pre><code>url=http://169.254.169.254/latest/meta-data/
+url=http://localhost:8080/admin
+url=http://internal-service.local/api/secrets</code></pre></div>
+                        <p class="vuln-impact"><strong>Impact:</strong> Internal network access, cloud metadata exposure, RCE</p>
+                    </div>
+                    <div class="vuln-card vuln-medium">
+                        <div class="vuln-severity">MEDIUM</div>
+                        <h4>Insecure Direct Object Reference (IDOR)</h4>
+                        <p>Accessing other users' data by changing ID parameters.</p>
+                        <div class="code-block"><div class="code-header"><span>Example</span></div>
+<pre><code>GET /api/user/profile?id=123  (your profile)
+GET /api/user/profile?id=124  (someone else's!)
+GET /api/invoice/download?id=5001 (other user's invoice)</code></pre></div>
+                        <p class="vuln-impact"><strong>Impact:</strong> Unauthorized data access, privacy violation</p>
+                    </div>
+                    <div class="vuln-card vuln-critical">
+                        <div class="vuln-severity">CRITICAL</div>
+                        <h4>Remote Code Execution (RCE)</h4>
+                        <p>Executing arbitrary commands on the target server.</p>
+                        <div class="code-block"><div class="code-header"><span>Example</span></div>
+<pre><code>; cat /etc/passwd
+| whoami
+`id`
+${7*7} (Template injection -> RCE)</code></pre></div>
+                        <p class="vuln-impact"><strong>Impact:</strong> Full server compromise, data exfiltration</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Platforms Tab -->
+            <div class="tab-content" id="tab-bh-platforms">
+                <div class="platform-list">
+                    <div class="platform-card">
+                        <h4><i class="fas fa-shield-alt"></i> HackerOne</h4>
+                        <p>Largest bug bounty platform. Companies like Google, Microsoft, Twitter have programs here.</p>
+                        <div class="platform-meta">
+                            <span class="platform-tag">Bug Bounty</span>
+                            <span class="platform-reward">Rewards: $50 - $100,000+</span>
+                        </div>
+                    </div>
+                    <div class="platform-card">
+                        <h4><i class="fas fa-bug"></i> Bugcrowd</h4>
+                        <p>Major bug bounty platform with vulnerability disclosure programs.</p>
+                        <div class="platform-meta">
+                            <span class="platform-tag">Bug Bounty</span>
+                            <span class="platform-reward">Rewards: $50 - $50,000+</span>
+                        </div>
+                    </div>
+                    <div class="platform-card">
+                        <h4><i class="fas fa-graduation-cap"></i> TryHackMe</h4>
+                        <p>Best platform for beginners. Guided rooms with step-by-step learning paths.</p>
+                        <div class="platform-meta">
+                            <span class="platform-tag">Learning</span>
+                            <span class="platform-reward">Free + Premium</span>
+                        </div>
+                    </div>
+                    <div class="platform-card">
+                        <h4><i class="fas fa-box"></i> HackTheBox</h4>
+                        <p>Advanced platform with realistic machines and challenges.</p>
+                        <div class="platform-meta">
+                            <span class="platform-tag">Practice</span>
+                            <span class="platform-reward">Free + VIP</span>
+                        </div>
+                    </div>
+                    <div class="platform-card">
+                        <h4><i class="fas fa-flask"></i> PortSwigger Web Security Academy</h4>
+                        <p>Free labs from Burp Suite creators. Best for learning web vulnerabilities.</p>
+                        <div class="platform-meta">
+                            <span class="platform-tag">Learning</span>
+                            <span class="platform-reward">100% Free</span>
+                        </div>
+                    </div>
+                    <div class="platform-card">
+                        <h4><i class="fas fa-flag"></i> PentesterLab</h4>
+                        <p>Hands-on exercises covering web, mobile, and infrastructure testing.</p>
+                        <div class="platform-meta">
+                            <span class="platform-tag">Practice</span>
+                            <span class="platform-reward">Free + Pro</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Excel Tutorial Section -->
+    <section class="section learning-section" id="excel">
+        <div class="container">
+            <h2 class="section-title" data-i18n="excel_title">Excel Tutorial</h2>
+            <p class="section-subtitle" data-i18n="excel_subtitle">Master spreadsheets from basic to advanced</p>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="excel-basics">Basics</button>
+                <button class="tab-btn" data-tab="excel-formulas">Formulas</button>
+                <button class="tab-btn" data-tab="excel-advanced">Advanced</button>
+                <button class="tab-btn" data-tab="excel-tips">Tips & Tricks</button>
+            </div>
+            <!-- Basics Tab -->
+            <div class="tab-content active" id="tab-excel-basics">
+                <div class="excel-lessons">
+                    <div class="excel-card">
+                        <h4><i class="fas fa-table"></i> Cell References</h4>
+                        <p>Understanding cell references is the foundation of Excel.</p>
+                        <div class="excel-table">
+                            <table>
+                                <tr><th>Type</th><th>Example</th><th>Behavior</th></tr>
+                                <tr><td>Relative</td><td>A1</td><td>Changes when copied</td></tr>
+                                <tr><td>Absolute</td><td>$A$1</td><td>Never changes</td></tr>
+                                <tr><td>Mixed</td><td>$A1 or A$1</td><td>Partially fixed</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="excel-card">
+                        <h4><i class="fas fa-keyboard"></i> Essential Shortcuts</h4>
+                        <p>Speed up your workflow with these keyboard shortcuts.</p>
+                        <div class="excel-table">
+                            <table>
+                                <tr><th>Shortcut</th><th>Action</th></tr>
+                                <tr><td>Ctrl + C / V / X</td><td>Copy / Paste / Cut</td></tr>
+                                <tr><td>Ctrl + Z / Y</td><td>Undo / Redo</td></tr>
+                                <tr><td>Ctrl + Home</td><td>Go to cell A1</td></tr>
+                                <tr><td>Ctrl + End</td><td>Go to last used cell</td></tr>
+                                <tr><td>Ctrl + Shift + L</td><td>Toggle filters</td></tr>
+                                <tr><td>Alt + =</td><td>Auto SUM</td></tr>
+                                <tr><td>Ctrl + D</td><td>Fill down</td></tr>
+                                <tr><td>F2</td><td>Edit cell</td></tr>
+                                <tr><td>Ctrl + ;</td><td>Insert today's date</td></tr>
+                                <tr><td>Ctrl + T</td><td>Create table</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="excel-card">
+                        <h4><i class="fas fa-sort"></i> Data Formatting</h4>
+                        <p>Format your data properly for better readability and analysis.</p>
+                        <div class="excel-table">
+                            <table>
+                                <tr><th>Format</th><th>Example</th><th>Use Case</th></tr>
+                                <tr><td>Number</td><td>1,234.56</td><td>General numbers</td></tr>
+                                <tr><td>Currency</td><td>$1,234.56</td><td>Money values</td></tr>
+                                <tr><td>Percentage</td><td>85.5%</td><td>Ratios</td></tr>
+                                <tr><td>Date</td><td>01/15/2024</td><td>Dates</td></tr>
+                                <tr><td>Custom</td><td>###-####</td><td>Phone numbers</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Formulas Tab -->
+            <div class="tab-content" id="tab-excel-formulas">
+                <div class="excel-lessons">
+                    <div class="excel-card">
+                        <h4><i class="fas fa-calculator"></i> Basic Formulas</h4>
+                        <p>Essential formulas every Excel user must know.</p>
+                        <div class="excel-table">
+                            <table>
+                                <tr><th>Formula</th><th>Example</th><th>Result</th></tr>
+                                <tr><td>SUM</td><td>=SUM(A1:A10)</td><td>Total of range</td></tr>
+                                <tr><td>AVERAGE</td><td>=AVERAGE(B1:B10)</td><td>Mean value</td></tr>
+                                <tr><td>COUNT</td><td>=COUNT(A1:A10)</td><td>Count numbers</td></tr>
+                                <tr><td>MAX/MIN</td><td>=MAX(C1:C10)</td><td>Highest value</td></tr>
+                                <tr><td>IF</td><td>=IF(A1>70,"Pass","Fail")</td><td>Conditional</td></tr>
+                                <tr><td>COUNTIF</td><td>=COUNTIF(A:A,"Apple")</td><td>Count with criteria</td></tr>
+                                <tr><td>SUMIF</td><td>=SUMIF(A:A,"Sales",B:B)</td><td>Sum with criteria</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="excel-card">
+                        <h4><i class="fas fa-search"></i> VLOOKUP & HLOOKUP</h4>
+                        <p>Look up values in tables - the most asked formula in interviews!</p>
+                        <div class="code-block"><div class="code-header"><span>Formula</span></div>
+<pre><code>=VLOOKUP(lookup_value, table_array, col_index, [exact_match])
+
+Example: Find employee salary by ID
+=VLOOKUP(E2, A2:C100, 3, FALSE)
+
+- E2: The ID to search for
+- A2:C100: The data table (ID must be in first column)
+- 3: Return value from 3rd column (Salary)
+- FALSE: Exact match only
+
+Alternative (Modern): INDEX + MATCH
+=INDEX(C2:C100, MATCH(E2, A2:A100, 0))
+This is more flexible - lookup column doesn't need to be first!</code></pre></div>
+                    </div>
+                    <div class="excel-card">
+                        <h4><i class="fas fa-text-height"></i> Text Formulas</h4>
+                        <p>Manipulate and clean text data effectively.</p>
+                        <div class="excel-table">
+                            <table>
+                                <tr><th>Formula</th><th>Example</th><th>Result</th></tr>
+                                <tr><td>CONCATENATE</td><td>=A1&" "&B1</td><td>Join text</td></tr>
+                                <tr><td>LEFT</td><td>=LEFT("Hello",3)</td><td>"Hel"</td></tr>
+                                <tr><td>RIGHT</td><td>=RIGHT("Hello",2)</td><td>"lo"</td></tr>
+                                <tr><td>MID</td><td>=MID("Hello",2,3)</td><td>"ell"</td></tr>
+                                <tr><td>LEN</td><td>=LEN("Hello")</td><td>5</td></tr>
+                                <tr><td>TRIM</td><td>=TRIM("  Hi  ")</td><td>"Hi"</td></tr>
+                                <tr><td>UPPER/LOWER</td><td>=UPPER("hello")</td><td>"HELLO"</td></tr>
+                                <tr><td>SUBSTITUTE</td><td>=SUBSTITUTE(A1,"old","new")</td><td>Replace text</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="excel-card">
+                        <h4><i class="fas fa-calendar"></i> Date Formulas</h4>
+                        <p>Work with dates and time calculations.</p>
+                        <div class="excel-table">
+                            <table>
+                                <tr><th>Formula</th><th>Usage</th><th>Result</th></tr>
+                                <tr><td>TODAY()</td><td>=TODAY()</td><td>Current date</td></tr>
+                                <tr><td>NOW()</td><td>=NOW()</td><td>Current date & time</td></tr>
+                                <tr><td>DATEDIF</td><td>=DATEDIF(A1,B1,"d")</td><td>Days between dates</td></tr>
+                                <tr><td>YEAR/MONTH/DAY</td><td>=YEAR(A1)</td><td>Extract year</td></tr>
+                                <tr><td>NETWORKDAYS</td><td>=NETWORKDAYS(A1,B1)</td><td>Working days only</td></tr>
+                                <tr><td>EDATE</td><td>=EDATE(A1,3)</td><td>Add 3 months</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Advanced Tab -->
+            <div class="tab-content" id="tab-excel-advanced">
+                <div class="excel-lessons">
+                    <div class="excel-card">
+                        <h4><i class="fas fa-chart-bar"></i> Pivot Tables</h4>
+                        <p>Summarize large datasets in seconds. The most powerful Excel feature.</p>
+                        <div class="code-block"><div class="code-header"><span>Steps to Create Pivot Table</span></div>
+<pre><code>1. Select your data (Ctrl + A)
+2. Insert > PivotTable
+3. Choose where to place it (New Worksheet recommended)
+4. Drag fields:
+   - ROWS: Category/Name (what to group by)
+   - VALUES: Numbers (Sum, Count, Average)
+   - COLUMNS: Secondary grouping
+   - FILTERS: Narrow down data
+
+Example: Sales Report
+- Rows: Product Name
+- Values: Sum of Revenue
+- Columns: Month
+- Filter: Region
+
+Tips:
+- Right-click value > "Value Field Settings" to change calculation
+- Group dates by Month/Quarter/Year
+- Use Slicers for visual filtering (Insert > Slicer)</code></pre></div>
+                    </div>
+                    <div class="excel-card">
+                        <h4><i class="fas fa-filter"></i> Advanced Filtering & Conditional Formatting</h4>
+                        <p>Highlight important data automatically with rules.</p>
+                        <div class="code-block"><div class="code-header"><span>Conditional Formatting Rules</span></div>
+<pre><code>Common Rules:
+1. Highlight cells > Greater than 1000 (red)
+2. Top 10 Items (green)
+3. Data Bars (visual bar in cells)
+4. Color Scales (heat map - red to green)
+5. Icon Sets (arrows up/down)
+
+Custom Formula Rules:
+- Highlight entire row if cell = "Overdue"
+  Formula: =$E1="Overdue"
+- Highlight duplicates
+  Formula: =COUNTIF($A:$A,A1)>1
+- Alternating row colors
+  Formula: =MOD(ROW(),2)=0</code></pre></div>
+                    </div>
+                    <div class="excel-card">
+                        <h4><i class="fas fa-chart-line"></i> Charts & Visualization</h4>
+                        <p>Choose the right chart type for your data.</p>
+                        <div class="excel-table">
+                            <table>
+                                <tr><th>Chart Type</th><th>Best For</th><th>Example</th></tr>
+                                <tr><td>Bar/Column</td><td>Comparing categories</td><td>Sales by product</td></tr>
+                                <tr><td>Line</td><td>Trends over time</td><td>Monthly revenue</td></tr>
+                                <tr><td>Pie</td><td>Parts of a whole</td><td>Market share</td></tr>
+                                <tr><td>Scatter</td><td>Relationships</td><td>Price vs demand</td></tr>
+                                <tr><td>Combo</td><td>Mixed data types</td><td>Revenue + growth %</td></tr>
+                                <tr><td>Waterfall</td><td>Running total</td><td>Profit breakdown</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Tips & Tricks Tab -->
+            <div class="tab-content" id="tab-excel-tips">
+                <div class="excel-lessons">
+                    <div class="excel-card">
+                        <h4><i class="fas fa-magic"></i> Power Tips</h4>
+                        <p>Pro tips that will save you hours of work.</p>
+                        <div class="tips-list">
+                            <div class="tip-item"><span class="tip-num">1</span><div><strong>Flash Fill (Ctrl+E)</strong><br>Excel auto-detects patterns. Type one example and press Ctrl+E to fill the rest.</div></div>
+                            <div class="tip-item"><span class="tip-num">2</span><div><strong>Quick Analysis (Ctrl+Q)</strong><br>Select data, press Ctrl+Q for instant charts, formatting, totals.</div></div>
+                            <div class="tip-item"><span class="tip-num">3</span><div><strong>Name Manager</strong><br>Give ranges names like "Sales_Data" instead of using A1:Z100 in formulas.</div></div>
+                            <div class="tip-item"><span class="tip-num">4</span><div><strong>Data Validation</strong><br>Create dropdown lists: Data > Validation > List. Prevents wrong inputs.</div></div>
+                            <div class="tip-item"><span class="tip-num">5</span><div><strong>XLOOKUP (Modern)</strong><br>=XLOOKUP(value, lookup_range, return_range) - Replaces VLOOKUP!</div></div>
+                            <div class="tip-item"><span class="tip-num">6</span><div><strong>Freeze Panes</strong><br>View > Freeze Panes to keep headers visible while scrolling.</div></div>
+                            <div class="tip-item"><span class="tip-num">7</span><div><strong>Remove Duplicates</strong><br>Data > Remove Duplicates. Instant clean-up of repeated entries.</div></div>
+                            <div class="tip-item"><span class="tip-num">8</span><div><strong>Text to Columns</strong><br>Split data in one column into multiple. Great for cleaning imported data.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Math Section -->
     <section class="section learning-section" id="math">
@@ -411,33 +1231,47 @@ while count < 3:
             <p class="section-subtitle" data-i18n="math_subtitle">Build strong math foundations</p>
             <div class="tabs">
                 <button class="tab-btn active" data-tab="algebra">Algebra</button>
-                <button class="tab-btn" data-tab="geometry" data-i18n="tab_geometry">Geometry</button>
+                <button class="tab-btn" data-tab="geometry">Geometry</button>
+                <button class="tab-btn" data-tab="statistics">Statistics</button>
             </div>
             <div class="tab-content active" id="tab-algebra">
                 <div class="math-lessons">
                     <div class="math-card">
                         <h4><i class="fas fa-superscript"></i> Linear Equations</h4>
-                        <p data-i18n="math_linear_desc">Solve equations with one variable</p>
+                        <p>Solve equations with one variable</p>
                         <div class="math-example">
                             <div class="formula">2x + 5 = 15</div>
                             <div class="steps">
                                 <p><strong>Step 1:</strong> 2x = 15 - 5</p>
                                 <p><strong>Step 2:</strong> 2x = 10</p>
                                 <p><strong>Step 3:</strong> x = 10 / 2</p>
-                                <p><strong>Answer:</strong> x = 5 ✓</p>
+                                <p><strong>Answer:</strong> x = 5</p>
                             </div>
                         </div>
                     </div>
                     <div class="math-card">
                         <h4><i class="fas fa-square-root-variable"></i> Quadratic Equations</h4>
-                        <p data-i18n="math_quadratic_desc">Solve ax² + bx + c = 0</p>
+                        <p>Solve ax² + bx + c = 0</p>
                         <div class="math-example">
                             <div class="formula">x² - 5x + 6 = 0</div>
                             <div class="steps">
                                 <p><strong>Method:</strong> Factoring</p>
                                 <p><strong>Step 1:</strong> (x - 2)(x - 3) = 0</p>
-                                <p><strong>Step 2:</strong> x - 2 = 0 or x - 3 = 0</p>
-                                <p><strong>Answer:</strong> x = 2 or x = 3 ✓</p>
+                                <p><strong>Step 2:</strong> x = 2 or x = 3</p>
+                                <p><strong>ABC Formula:</strong> x = (-b ± √(b²-4ac)) / 2a</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="math-card">
+                        <h4><i class="fas fa-chart-line"></i> Linear Functions</h4>
+                        <p>Understanding y = mx + b</p>
+                        <div class="math-example">
+                            <div class="formula">y = 2x + 3</div>
+                            <div class="steps">
+                                <p><strong>m (slope):</strong> 2 (rise/run)</p>
+                                <p><strong>b (y-intercept):</strong> 3</p>
+                                <p><strong>When x=0:</strong> y = 3</p>
+                                <p><strong>When x=2:</strong> y = 7</p>
                             </div>
                         </div>
                     </div>
@@ -447,27 +1281,70 @@ while count < 3:
                 <div class="math-lessons">
                     <div class="math-card">
                         <h4><i class="fas fa-shapes"></i> Area Formulas</h4>
-                        <p data-i18n="math_area_desc">Calculate areas of common shapes</p>
+                        <p>Calculate areas of common shapes</p>
                         <div class="math-example">
                             <div class="formula-list">
-                                <p>▢ Rectangle: A = length × width</p>
-                                <p>△ Triangle: A = ½ × base × height</p>
+                                <p>▢ Rectangle: A = l × w</p>
+                                <p>△ Triangle: A = ½ × b × h</p>
                                 <p>○ Circle: A = π × r²</p>
-                                <p>▱ Trapezoid: A = ½ × (a + b) × h</p>
+                                <p>▱ Trapezoid: A = ½(a+b) × h</p>
+                                <p>◇ Rhombus: A = ½ × d1 × d2</p>
                             </div>
                         </div>
                     </div>
                     <div class="math-card">
                         <h4><i class="fas fa-ruler-combined"></i> Pythagorean Theorem</h4>
-                        <p data-i18n="math_pythagoras_desc">For right triangles: a² + b² = c²</p>
+                        <p>For right triangles: a² + b² = c²</p>
                         <div class="math-example">
                             <div class="formula">a² + b² = c²</div>
                             <div class="steps">
-                                <p><strong>Example:</strong> a = 3, b = 4, find c</p>
-                                <p><strong>Step 1:</strong> 3² + 4² = c²</p>
-                                <p><strong>Step 2:</strong> 9 + 16 = c²</p>
-                                <p><strong>Step 3:</strong> c² = 25</p>
-                                <p><strong>Answer:</strong> c = 5 ✓</p>
+                                <p><strong>Given:</strong> a = 3, b = 4</p>
+                                <p><strong>Step 1:</strong> 9 + 16 = c²</p>
+                                <p><strong>Step 2:</strong> c² = 25</p>
+                                <p><strong>Answer:</strong> c = 5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="math-card">
+                        <h4><i class="fas fa-cube"></i> Volume Formulas</h4>
+                        <p>Calculate volume of 3D shapes</p>
+                        <div class="math-example">
+                            <div class="formula-list">
+                                <p>Cube: V = s³</p>
+                                <p>Cuboid: V = l × w × h</p>
+                                <p>Cylinder: V = π × r² × h</p>
+                                <p>Sphere: V = 4/3 × π × r³</p>
+                                <p>Cone: V = 1/3 × π × r² × h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-statistics">
+                <div class="math-lessons">
+                    <div class="math-card">
+                        <h4><i class="fas fa-chart-bar"></i> Central Tendency</h4>
+                        <p>Mean, Median, and Mode</p>
+                        <div class="math-example">
+                            <div class="formula">Data: 3, 5, 7, 7, 9, 11</div>
+                            <div class="steps">
+                                <p><strong>Mean:</strong> (3+5+7+7+9+11)/6 = 7</p>
+                                <p><strong>Median:</strong> (7+7)/2 = 7</p>
+                                <p><strong>Mode:</strong> 7 (most frequent)</p>
+                                <p><strong>Range:</strong> 11-3 = 8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="math-card">
+                        <h4><i class="fas fa-percentage"></i> Probability</h4>
+                        <p>Likelihood of events occurring</p>
+                        <div class="math-example">
+                            <div class="formula">P(event) = favorable / total</div>
+                            <div class="steps">
+                                <p><strong>Dice rolling 6:</strong> P = 1/6</p>
+                                <p><strong>Coin heads:</strong> P = 1/2</p>
+                                <p><strong>Card (ace):</strong> P = 4/52 = 1/13</p>
+                                <p><strong>Two dice sum 7:</strong> P = 6/36 = 1/6</p>
                             </div>
                         </div>
                     </div>
@@ -476,11 +1353,12 @@ while count < 3:
         </div>
     </section>
 
+
     <!-- Quiz Section -->
     <section class="section quiz-section" id="quiz">
         <div class="container">
             <h2 class="section-title" data-i18n="quiz_title">Quiz & Practice</h2>
-            <p class="section-subtitle" data-i18n="quiz_subtitle">Test your knowledge</p>
+            <p class="section-subtitle" data-i18n="quiz_subtitle">Test your knowledge with 100+ questions</p>
             <div class="quiz-container" id="quiz-container">
                 <div class="quiz-header">
                     <div class="quiz-progress">
@@ -493,22 +1371,12 @@ while count < 3:
                 <div class="quiz-category-select" id="quiz-category-select">
                     <h3 data-i18n="quiz_choose_category">Choose a Category</h3>
                     <div class="quiz-categories">
-                        <button class="quiz-cat-btn" onclick="startQuiz('english')">
-                            <i class="fas fa-language"></i>
-                            <span>English</span>
-                        </button>
-                        <button class="quiz-cat-btn" onclick="startQuiz('coding')">
-                            <i class="fas fa-code"></i>
-                            <span>Coding</span>
-                        </button>
-                        <button class="quiz-cat-btn" onclick="startQuiz('math')">
-                            <i class="fas fa-calculator"></i>
-                            <span>Math</span>
-                        </button>
-                        <button class="quiz-cat-btn" onclick="startQuiz('mixed')">
-                            <i class="fas fa-random"></i>
-                            <span>Mixed</span>
-                        </button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('english')"><i class="fas fa-language"></i><span>English</span></button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('coding')"><i class="fas fa-code"></i><span>Coding</span></button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('math')"><i class="fas fa-calculator"></i><span>Math</span></button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('bughunter')"><i class="fas fa-bug"></i><span>Bug Hunter</span></button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('excel')"><i class="fas fa-table"></i><span>Excel</span></button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('mixed')"><i class="fas fa-random"></i><span>Mixed</span></button>
                     </div>
                 </div>
                 <div class="quiz-body" id="quiz-body" style="display:none;">
@@ -527,23 +1395,22 @@ while count < 3:
         </div>
     </section>
 
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="nav-logo">
-                        <i class="fas fa-robot"></i>
-                        <span>Learning Machine</span>
-                    </div>
+                    <div class="nav-logo"><i class="fas fa-robot"></i><span>Learning Machine</span></div>
                     <p data-i18n="footer_desc">Your smart learning companion for mastering new skills.</p>
                 </div>
                 <div class="footer-links">
                     <h4 data-i18n="footer_courses">Courses</h4>
-                    <a href="#english" data-i18n="nav_english">English</a>
-                    <a href="#coding" data-i18n="nav_coding">Coding</a>
-                    <a href="#math" data-i18n="nav_math">Math</a>
-                    <a href="#quiz" data-i18n="nav_quiz">Quiz</a>
+                    <a href="#english">English</a>
+                    <a href="#coding">Coding</a>
+                    <a href="#bughunter">Bug Hunter</a>
+                    <a href="#excel">Excel</a>
+                    <a href="#math">Math</a>
                 </div>
                 <div class="footer-links">
                     <h4 data-i18n="footer_features">Features</h4>
@@ -554,7 +1421,7 @@ while count < 3:
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Learning Machine. Made with <i class="fas fa-heart"></i> for learners everywhere.</p>
+                <p>&copy; 2024 Learning Machine. Made with <i class="fas fa-heart"></i> for learners everywhere.</p>
             </div>
         </div>
     </footer>

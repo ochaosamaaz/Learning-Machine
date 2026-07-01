@@ -593,3 +593,356 @@
 .scroll-top:hover {
     transform: translateY(-3px);
 }
+
+
+
+/* ============================================
+   BUG HUNTER - ROADMAP
+   ============================================ */
+.roadmap-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.roadmap-phase {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.phase-header h4 {
+    font-size: 1.1rem;
+}
+
+.phase-num {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.phase-beginner { background: linear-gradient(135deg, #28a745, #20c997); }
+.phase-intermediate { background: linear-gradient(135deg, #007bff, #6f42c1); }
+.phase-advanced { background: linear-gradient(135deg, #fd7e14, #dc3545); }
+.phase-pro { background: linear-gradient(135deg, #6c63ff, #e91e63); }
+
+.phase-content {
+    padding: 25px;
+}
+
+.phase-content ul {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.phase-content li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.phase-content li i {
+    color: var(--accent);
+    margin-top: 3px;
+    min-width: 16px;
+}
+
+/* ============================================
+   TOOLS GRID
+   ============================================ */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+.tool-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-sm);
+    background: rgba(108, 99, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.tool-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.tool-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.tool-tag {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 12px;
+    border-radius: 15px;
+    background: rgba(108, 99, 255, 0.1);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ============================================
+   VULNERABILITY CARDS
+   ============================================ */
+.vuln-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.vuln-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    border-left: 4px solid;
+}
+
+.vuln-critical { border-left-color: #dc3545; }
+.vuln-high { border-left-color: #fd7e14; }
+.vuln-medium { border-left-color: #ffc107; }
+
+.vuln-severity {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.vuln-critical .vuln-severity { background: rgba(220,53,69,0.1); color: #dc3545; }
+.vuln-high .vuln-severity { background: rgba(253,126,20,0.1); color: #fd7e14; }
+.vuln-medium .vuln-severity { background: rgba(255,193,7,0.1); color: #856404; }
+
+.vuln-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.vuln-card > p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.vuln-impact {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   PLATFORM CARDS
+   ============================================ */
+.platform-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.platform-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    transition: var(--transition);
+}
+
+.platform-card:hover {
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+.platform-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.platform-card h4 i {
+    margin-right: 8px;
+}
+
+.platform-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.platform-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.platform-tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(108, 99, 255, 0.1);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.platform-reward {
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ============================================
+   EXCEL CARDS
+   ============================================ */
+.excel-lessons {
+    display: grid;
+    gap: 25px;
+}
+
+.excel-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px;
+}
+
+.excel-card h4 {
+    color: #217346;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.excel-card h4 i {
+    margin-right: 8px;
+}
+
+.excel-card > p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.excel-table {
+    overflow-x: auto;
+}
+
+.excel-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.excel-table th,
+.excel-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid var(--border);
+}
+
+.excel-table th {
+    background: var(--bg-secondary);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.excel-table td {
+    color: var(--text-secondary);
+}
+
+.excel-table tr:hover td {
+    background: rgba(33, 115, 70, 0.05);
+}
+
+/* ============================================
+   TIPS LIST
+   ============================================ */
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.tip-num {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.tip-item div {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.tip-item strong {
+    color: var(--text-primary);
+}
+
+/* ============================================
+   BUG HUNTER ICON
+   ============================================ */
+.bughunter-icon { background: rgba(220, 53, 69, 0.1); color: #dc3545; }
+.excel-icon { background: rgba(33, 115, 70, 0.1); color: #217346; }

@@ -1,225 +1,121 @@
 /* ============================================
-   QUIZ DATA - Questions for all categories
+   QUIZ DATA - 100+ Questions
    ============================================ */
 
 const quizData = {
     english: [
-        {
-            question: "What is the past tense of 'go'?",
-            question_id: "Apa bentuk past tense dari 'go'?",
-            options: ["goed", "went", "gone", "going"],
-            correct: 1,
-            explanation: "'Went' is the irregular past tense of 'go'."
-        },
-        {
-            question: "Which sentence is correct?",
-            question_id: "Kalimat mana yang benar?",
-            options: ["She don't like coffee.", "She doesn't likes coffee.", "She doesn't like coffee.", "She not like coffee."],
-            correct: 2,
-            explanation: "With third person singular (she/he/it), we use 'doesn't' + base verb."
-        },
-        {
-            question: "What does 'magnificent' mean?",
-            question_id: "Apa arti 'magnificent'?",
-            options: ["Small", "Ugly", "Very impressive/beautiful", "Boring"],
-            correct: 2,
-            explanation: "'Magnificent' means extremely beautiful or impressive."
-        },
-        {
-            question: "Choose the correct preposition: 'I arrived ___ the airport.'",
-            question_id: "Pilih preposisi yang benar: 'I arrived ___ the airport.'",
-            options: ["in", "on", "at", "to"],
-            correct: 2,
-            explanation: "We use 'at' for specific locations like airports, stations."
-        },
-        {
-            question: "What is the plural of 'child'?",
-            question_id: "Apa bentuk jamak dari 'child'?",
-            options: ["childs", "childrens", "children", "childes"],
-            correct: 2,
-            explanation: "'Children' is the irregular plural of 'child'."
-        },
-        {
-            question: "Which word is a synonym of 'happy'?",
-            question_id: "Kata mana yang sinonim dari 'happy'?",
-            options: ["Sad", "Joyful", "Angry", "Tired"],
-            correct: 1,
-            explanation: "'Joyful' means feeling great happiness, same as 'happy'."
-        },
-        {
-            question: "'I have been studying for 3 hours.' What tense is this?",
-            question_id: "'I have been studying for 3 hours.' Tense apa ini?",
-            options: ["Simple Present", "Present Perfect", "Present Perfect Continuous", "Past Continuous"],
-            correct: 2,
-            explanation: "Present Perfect Continuous: have/has + been + verb-ing (duration of action)."
-        },
-        {
-            question: "What is the opposite of 'generous'?",
-            question_id: "Apa lawan kata dari 'generous'?",
-            options: ["Kind", "Selfish", "Brave", "Honest"],
-            correct: 1,
-            explanation: "'Selfish' (only thinks of themselves) is opposite of 'generous' (likes to give)."
-        },
-        {
-            question: "Fill in: 'If I ___ rich, I would travel the world.'",
-            question_id: "Isi: 'If I ___ rich, I would travel the world.'",
-            options: ["am", "was", "were", "be"],
-            correct: 2,
-            explanation: "In second conditional (unreal present), we use 'were' for all subjects."
-        },
-        {
-            question: "Which is a correct question tag? 'She is a doctor, ___?'",
-            question_id: "Mana question tag yang benar? 'She is a doctor, ___?'",
-            options: ["is she?", "isn't she?", "does she?", "doesn't she?"],
-            correct: 1,
-            explanation: "Positive statement → negative tag. 'is' → 'isn't she?'"
-        }
+        { question: "What is the past tense of 'go'?", question_id: "Apa bentuk past tense dari 'go'?", options: ["goed", "went", "gone", "going"], correct: 1 },
+        { question: "Which sentence is correct?", question_id: "Kalimat mana yang benar?", options: ["She don't like coffee.", "She doesn't likes coffee.", "She doesn't like coffee.", "She not like coffee."], correct: 2 },
+        { question: "What does 'magnificent' mean?", question_id: "Apa arti 'magnificent'?", options: ["Small", "Ugly", "Very impressive", "Boring"], correct: 2 },
+        { question: "'I arrived ___ the airport.' Choose correct preposition.", question_id: "Pilih preposisi yang benar: 'I arrived ___ the airport.'", options: ["in", "on", "at", "to"], correct: 2 },
+        { question: "What is the plural of 'child'?", question_id: "Apa bentuk jamak dari 'child'?", options: ["childs", "childrens", "children", "childes"], correct: 2 },
+        { question: "Which is a synonym of 'happy'?", question_id: "Sinonim dari 'happy'?", options: ["Sad", "Joyful", "Angry", "Tired"], correct: 1 },
+        { question: "'I have been studying for 3 hours.' What tense?", question_id: "Tense apa ini?", options: ["Simple Present", "Present Perfect", "Present Perfect Continuous", "Past Continuous"], correct: 2 },
+        { question: "What is the opposite of 'generous'?", question_id: "Lawan kata dari 'generous'?", options: ["Kind", "Selfish", "Brave", "Honest"], correct: 1 },
+        { question: "'If I ___ rich, I would travel.' Fill in.", question_id: "Isi: 'If I ___ rich, I would travel.'", options: ["am", "was", "were", "be"], correct: 2 },
+        { question: "'She is a doctor, ___?' Choose correct tag.", question_id: "Question tag yang benar?", options: ["is she?", "isn't she?", "does she?", "doesn't she?"], correct: 1 },
+        { question: "What does 'procrastinate' mean?", question_id: "Apa arti 'procrastinate'?", options: ["Work hard", "Delay doing something", "Finish early", "Plan ahead"], correct: 1 },
+        { question: "Choose the correct word: 'I have ___ homework.'", question_id: "Pilih kata yang benar: 'I have ___ homework.'", options: ["much", "many", "a lot", "few"], correct: 0 },
+        { question: "What's the past participle of 'write'?", question_id: "Apa past participle dari 'write'?", options: ["writed", "wrote", "written", "writing"], correct: 2 },
+        { question: "'Despite ___ tired, she kept working.'", question_id: "'Despite ___ tired, she kept working.'", options: ["be", "being", "was", "been"], correct: 1 },
+        { question: "Which sentence uses 'their' correctly?", question_id: "Kalimat mana yang menggunakan 'their' dengan benar?", options: ["Their going home.", "I like their house.", "Their is a problem.", "Their happy today."], correct: 1 },
+        { question: "What is a 'metaphor'?", question_id: "Apa itu 'metaphor'?", options: ["A direct comparison using like/as", "A comparison without like/as", "An exaggeration", "A question"], correct: 1 },
+        { question: "'She speaks English ___.'", question_id: "'She speaks English ___.'", options: ["fluent", "fluency", "fluently", "fluentness"], correct: 2 },
+        { question: "What does 'ASAP' stand for?", question_id: "Apa kepanjangan 'ASAP'?", options: ["As Soon As Perfect", "As Soon As Possible", "Always Stay Active Please", "After Some Additional Planning"], correct: 1 },
+        { question: "'I wish I ___ speak Japanese.'", question_id: "'I wish I ___ speak Japanese.'", options: ["can", "could", "will", "would"], correct: 1 },
+        { question: "Which is correct: 'less' or 'fewer'?", question_id: "Mana yang benar?", options: ["Less people came.", "Fewer people came.", "Less peoples came.", "Few people came."], correct: 1 }
     ],
     coding: [
-        {
-            question: "What does HTML stand for?",
-            question_id: "Apa kepanjangan HTML?",
-            options: ["Hyper Text Markup Language", "High Tech Modern Language", "Hyper Transfer Markup Language", "Home Tool Markup Language"],
-            correct: 0,
-            explanation: "HTML = Hyper Text Markup Language, the standard language for web pages."
-        },
-        {
-            question: "Which CSS property changes text color?",
-            question_id: "Properti CSS mana yang mengubah warna teks?",
-            options: ["text-color", "font-color", "color", "text-style"],
-            correct: 2,
-            explanation: "The 'color' property in CSS is used to set the text color."
-        },
-        {
-            question: "What is the correct way to declare a variable in JavaScript?",
-            question_id: "Apa cara yang benar untuk mendeklarasikan variabel di JavaScript?",
-            options: ["variable x = 5;", "let x = 5;", "v x = 5;", "declare x = 5;"],
-            correct: 1,
-            explanation: "In modern JavaScript, 'let' and 'const' are used to declare variables."
-        },
-        {
-            question: "What does CSS stand for?",
-            question_id: "Apa kepanjangan CSS?",
-            options: ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
-            correct: 1,
-            explanation: "CSS = Cascading Style Sheets, used for styling web pages."
-        },
-        {
-            question: "Which symbol is used for comments in Python?",
-            question_id: "Simbol apa yang digunakan untuk komentar di Python?",
-            options: ["//", "/* */", "#", "--"],
-            correct: 2,
-            explanation: "In Python, the # symbol is used for single-line comments."
-        },
-        {
-            question: "What is the output of: console.log(typeof [])?",
-            question_id: "Apa output dari: console.log(typeof [])?",
-            options: ["array", "object", "list", "undefined"],
-            correct: 1,
-            explanation: "In JavaScript, arrays are technically objects, so typeof [] returns 'object'."
-        },
-        {
-            question: "Which tag is used for the largest heading in HTML?",
-            question_id: "Tag apa yang digunakan untuk heading terbesar di HTML?",
-            options: ["<heading>", "<h6>", "<h1>", "<head>"],
-            correct: 2,
-            explanation: "<h1> is the largest heading tag, <h6> is the smallest."
-        },
-        {
-            question: "What does 'print()' do in Python?",
-            question_id: "Apa fungsi 'print()' di Python?",
-            options: ["Prints a document", "Displays output to console", "Creates a variable", "Imports a module"],
-            correct: 1,
-            explanation: "print() displays/outputs text or values to the console/terminal."
-        },
-        {
-            question: "Which is NOT a JavaScript data type?",
-            question_id: "Mana yang BUKAN tipe data JavaScript?",
-            options: ["String", "Boolean", "Float", "Undefined"],
-            correct: 2,
-            explanation: "JavaScript has Number (not separate Float/Integer), String, Boolean, etc."
-        },
-        {
-            question: "What does the '===' operator do in JavaScript?",
-            question_id: "Apa yang dilakukan operator '===' di JavaScript?",
-            options: ["Assigns a value", "Compares value only", "Compares value and type", "Mathematical equality"],
-            correct: 2,
-            explanation: "'===' checks both value AND data type (strict equality)."
-        }
+        { question: "What does HTML stand for?", question_id: "Apa kepanjangan HTML?", options: ["Hyper Text Markup Language", "High Tech Modern Language", "Hyper Transfer Markup Language", "Home Tool Markup Language"], correct: 0 },
+        { question: "Which CSS property changes text color?", question_id: "Properti CSS untuk warna teks?", options: ["text-color", "font-color", "color", "text-style"], correct: 2 },
+        { question: "Correct way to declare a variable in JS?", question_id: "Cara benar deklarasi variabel JS?", options: ["variable x = 5;", "let x = 5;", "v x = 5;", "declare x = 5;"], correct: 1 },
+        { question: "What does CSS stand for?", question_id: "Apa kepanjangan CSS?", options: ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"], correct: 1 },
+        { question: "Which symbol for comments in Python?", question_id: "Simbol komentar di Python?", options: ["//", "/* */", "#", "--"], correct: 2 },
+        { question: "Output of: console.log(typeof [])?", question_id: "Output dari: console.log(typeof [])?", options: ["array", "object", "list", "undefined"], correct: 1 },
+        { question: "Largest heading tag in HTML?", question_id: "Tag heading terbesar di HTML?", options: ["<heading>", "<h6>", "<h1>", "<head>"], correct: 2 },
+        { question: "What does print() do in Python?", question_id: "Apa fungsi print() di Python?", options: ["Prints document", "Displays output to console", "Creates variable", "Imports module"], correct: 1 },
+        { question: "Which is NOT a JS data type?", question_id: "Mana yang BUKAN tipe data JS?", options: ["String", "Boolean", "Float", "Undefined"], correct: 2 },
+        { question: "What does '===' do in JavaScript?", question_id: "Apa fungsi '===' di JavaScript?", options: ["Assigns value", "Compares value only", "Compares value and type", "Mathematical equality"], correct: 2 },
+        { question: "What is a CSS selector?", question_id: "Apa itu CSS selector?", options: ["JS function", "Pattern to target HTML elements", "HTML tag", "Database query"], correct: 1 },
+        { question: "Which creates a function in Python?", question_id: "Mana yang membuat fungsi di Python?", options: ["function myFunc():", "def myFunc():", "create myFunc():", "func myFunc():"], correct: 1 },
+        { question: "What does 'git push' do?", question_id: "Apa fungsi 'git push'?", options: ["Downloads from remote", "Uploads to remote", "Creates branch", "Deletes commits"], correct: 1 },
+        { question: "What is JSON?", question_id: "Apa itu JSON?", options: ["Programming language", "Data interchange format", "Database system", "CSS framework"], correct: 1 },
+        { question: "What does API stand for?", question_id: "Apa kepanjangan API?", options: ["Application Programming Interface", "Advanced Protocol Integration", "Automated Program Installation", "Application Process Input"], correct: 0 },
+        { question: "Which HTTP method retrieves data?", question_id: "Method HTTP untuk mengambil data?", options: ["POST", "GET", "PUT", "DELETE"], correct: 1 },
+        { question: "What is 'responsive design'?", question_id: "Apa itu 'responsive design'?", options: ["Fast loading", "Adapts to screen sizes", "Colorful design", "Animation-heavy"], correct: 1 },
+        { question: "What does 'npm' stand for?", question_id: "Apa kepanjangan npm?", options: ["Node Package Manager", "New Programming Method", "Network Protocol Manager", "Node Project Module"], correct: 0 },
+        { question: "What is a 'loop' in programming?", question_id: "Apa itu 'loop' dalam pemrograman?", options: ["An error", "Repeated code execution", "A variable type", "A function name"], correct: 1 },
+        { question: "Which is a Python framework for web?", question_id: "Framework Python untuk web?", options: ["React", "Django", "Angular", "Vue"], correct: 1 }
     ],
     math: [
-        {
-            question: "What is 15% of 200?",
-            question_id: "Berapa 15% dari 200?",
-            options: ["15", "20", "30", "35"],
-            correct: 2,
-            explanation: "15% × 200 = (15/100) × 200 = 30"
-        },
-        {
-            question: "Solve: 3x + 7 = 22",
-            question_id: "Selesaikan: 3x + 7 = 22",
-            options: ["x = 3", "x = 5", "x = 7", "x = 4"],
-            correct: 1,
-            explanation: "3x = 22 - 7 = 15, so x = 15/3 = 5"
-        },
-        {
-            question: "What is the area of a circle with radius 7? (use π ≈ 22/7)",
-            question_id: "Berapa luas lingkaran dengan jari-jari 7? (gunakan π ≈ 22/7)",
-            options: ["44", "154", "88", "196"],
-            correct: 1,
-            explanation: "A = πr² = (22/7) × 7² = (22/7) × 49 = 154"
-        },
-        {
-            question: "What is √144?",
-            question_id: "Berapa √144?",
-            options: ["11", "12", "13", "14"],
-            correct: 1,
-            explanation: "12 × 12 = 144, so √144 = 12"
-        },
-        {
-            question: "If a triangle has angles of 60° and 80°, what is the third angle?",
-            question_id: "Jika segitiga memiliki sudut 60° dan 80°, berapa sudut ketiga?",
-            options: ["30°", "40°", "50°", "60°"],
-            correct: 1,
-            explanation: "Sum of angles in triangle = 180°. So: 180 - 60 - 80 = 40°"
-        },
-        {
-            question: "What is 2³ × 2²?",
-            question_id: "Berapa 2³ × 2²?",
-            options: ["16", "32", "64", "10"],
-            correct: 1,
-            explanation: "2³ × 2² = 2^(3+2) = 2⁵ = 32"
-        },
-        {
-            question: "Simplify: (x² + 2x) / x",
-            question_id: "Sederhanakan: (x² + 2x) / x",
-            options: ["x + 2x", "x + 2", "x² + 2", "2x"],
-            correct: 1,
-            explanation: "(x² + 2x) / x = x²/x + 2x/x = x + 2"
-        },
-        {
-            question: "What is the slope of the line y = 3x + 5?",
-            question_id: "Berapa gradien garis y = 3x + 5?",
-            options: ["5", "3", "8", "15"],
-            correct: 1,
-            explanation: "In y = mx + b form, m is the slope. Here m = 3."
-        },
-        {
-            question: "How many sides does a hexagon have?",
-            question_id: "Berapa sisi yang dimiliki segi enam?",
-            options: ["5", "6", "7", "8"],
-            correct: 1,
-            explanation: "A hexagon (hexa = 6) has 6 sides."
-        },
-        {
-            question: "What is the value of: 5! (5 factorial)?",
-            question_id: "Berapa nilai dari: 5! (5 faktorial)?",
-            options: ["25", "60", "120", "720"],
-            correct: 2,
-            explanation: "5! = 5 × 4 × 3 × 2 × 1 = 120"
-        }
+        { question: "What is 15% of 200?", question_id: "Berapa 15% dari 200?", options: ["15", "20", "30", "35"], correct: 2 },
+        { question: "Solve: 3x + 7 = 22", question_id: "Selesaikan: 3x + 7 = 22", options: ["x = 3", "x = 5", "x = 7", "x = 4"], correct: 1 },
+        { question: "Area of circle with radius 7? (π ≈ 22/7)", question_id: "Luas lingkaran r=7?", options: ["44", "154", "88", "196"], correct: 1 },
+        { question: "What is √144?", question_id: "Berapa √144?", options: ["11", "12", "13", "14"], correct: 1 },
+        { question: "Triangle angles: 60° and 80°. Third angle?", question_id: "Sudut ketiga segitiga (60°,80°)?", options: ["30°", "40°", "50°", "60°"], correct: 1 },
+        { question: "What is 2³ × 2²?", question_id: "Berapa 2³ × 2²?", options: ["16", "32", "64", "10"], correct: 1 },
+        { question: "Simplify: (x² + 2x) / x", question_id: "Sederhanakan: (x² + 2x) / x", options: ["x + 2x", "x + 2", "x² + 2", "2x"], correct: 1 },
+        { question: "Slope of y = 3x + 5?", question_id: "Gradien y = 3x + 5?", options: ["5", "3", "8", "15"], correct: 1 },
+        { question: "How many sides does a hexagon have?", question_id: "Berapa sisi segi enam?", options: ["5", "6", "7", "8"], correct: 1 },
+        { question: "What is 5! (factorial)?", question_id: "Berapa 5! (faktorial)?", options: ["25", "60", "120", "720"], correct: 2 },
+        { question: "What is the median of: 2, 4, 6, 8, 10?", question_id: "Median dari: 2, 4, 6, 8, 10?", options: ["4", "6", "8", "5"], correct: 1 },
+        { question: "If a = 3, b = 4, what is a² + b²?", question_id: "Jika a=3, b=4, berapa a²+b²?", options: ["7", "12", "25", "49"], correct: 2 },
+        { question: "What is 0.25 as a fraction?", question_id: "0.25 dalam pecahan?", options: ["1/5", "1/4", "1/3", "2/5"], correct: 1 },
+        { question: "Perimeter of rectangle 5×3?", question_id: "Keliling persegi panjang 5×3?", options: ["8", "15", "16", "30"], correct: 2 },
+        { question: "What is log₁₀(1000)?", question_id: "Berapa log₁₀(1000)?", options: ["2", "3", "4", "10"], correct: 1 },
+        { question: "Convert 3/4 to percentage.", question_id: "Ubah 3/4 ke persen.", options: ["34%", "50%", "75%", "80%"], correct: 2 },
+        { question: "What is the GCD of 12 and 18?", question_id: "FPB dari 12 dan 18?", options: ["2", "3", "6", "9"], correct: 2 },
+        { question: "Sum of interior angles of pentagon?", question_id: "Jumlah sudut dalam segi lima?", options: ["360°", "480°", "540°", "720°"], correct: 2 },
+        { question: "If f(x) = 2x + 1, what is f(3)?", question_id: "Jika f(x)=2x+1, berapa f(3)?", options: ["5", "6", "7", "8"], correct: 2 },
+        { question: "What is (-3) × (-4)?", question_id: "Berapa (-3) × (-4)?", options: ["-12", "-7", "7", "12"], correct: 3 }
+    ],
+
+
+    bughunter: [
+        { question: "What does XSS stand for?", question_id: "Apa kepanjangan XSS?", options: ["Cross-Site Scripting", "Cross-Server Security", "XML Site Structure", "External Script Source"], correct: 0 },
+        { question: "Which tool is used for intercepting HTTP requests?", question_id: "Tool untuk intercept HTTP request?", options: ["Nmap", "Burp Suite", "Wireshark", "Metasploit"], correct: 1 },
+        { question: "What is OWASP?", question_id: "Apa itu OWASP?", options: ["Operating system", "Web security project/organization", "Programming language", "Database system"], correct: 1 },
+        { question: "What does SQL injection exploit?", question_id: "SQL injection mengeksploitasi?", options: ["CSS styles", "Database queries", "File uploads", "Encryption"], correct: 1 },
+        { question: "Which HTTP status code means 'Forbidden'?", question_id: "Status code HTTP untuk 'Forbidden'?", options: ["401", "403", "404", "500"], correct: 1 },
+        { question: "What is IDOR?", question_id: "Apa itu IDOR?", options: ["A programming language", "Insecure Direct Object Reference", "Internet Domain Object Registry", "Input Data Output Result"], correct: 1 },
+        { question: "What port does HTTPS use?", question_id: "Port berapa untuk HTTPS?", options: ["80", "443", "8080", "22"], correct: 1 },
+        { question: "What is reconnaissance in hacking?", question_id: "Apa itu reconnaissance?", options: ["Attacking system", "Gathering information about target", "Deleting data", "Installing malware"], correct: 1 },
+        { question: "What does SSRF stand for?", question_id: "Apa kepanjangan SSRF?", options: ["Server-Side Request Forgery", "Simple Server Response Format", "Secure Socket Request Function", "Server Script Runtime Framework"], correct: 0 },
+        { question: "Which is a bug bounty platform?", question_id: "Mana yang platform bug bounty?", options: ["GitHub", "HackerOne", "StackOverflow", "npm"], correct: 1 },
+        { question: "What is a WAF?", question_id: "Apa itu WAF?", options: ["Web Application Firewall", "Wide Area Function", "Wireless Access Framework", "Web API Format"], correct: 0 },
+        { question: "What type of XSS is stored in database?", question_id: "Tipe XSS yang tersimpan di database?", options: ["Reflected", "Stored/Persistent", "DOM-based", "Self-XSS"], correct: 1 },
+        { question: "What is the purpose of Nmap?", question_id: "Apa fungsi Nmap?", options: ["Web development", "Network scanning", "Photo editing", "Text editing"], correct: 1 },
+        { question: "What is a 'zero-day' vulnerability?", question_id: "Apa itu kerentanan 'zero-day'?", options: ["Fixed vulnerability", "Unknown/unpatched vulnerability", "Old vulnerability", "Low-risk vulnerability"], correct: 1 },
+        { question: "What is the CIA triad in security?", question_id: "Apa itu CIA triad dalam keamanan?", options: ["Central Intelligence Agency", "Confidentiality, Integrity, Availability", "Code, Internet, Application", "Computer, Internet, Access"], correct: 1 },
+        { question: "Which header prevents clickjacking?", question_id: "Header untuk mencegah clickjacking?", options: ["X-Content-Type", "X-Frame-Options", "X-XSS-Protection", "Content-Type"], correct: 1 },
+        { question: "What is 'privilege escalation'?", question_id: "Apa itu 'privilege escalation'?", options: ["Gaining higher access rights", "Downloading files", "Creating accounts", "Sending emails"], correct: 0 },
+        { question: "What does CVE stand for?", question_id: "Apa kepanjangan CVE?", options: ["Common Vulnerabilities and Exposures", "Computer Virus Encyclopedia", "Cyber Vulnerability Engine", "Central Verification Entity"], correct: 0 },
+        { question: "What is social engineering?", question_id: "Apa itu social engineering?", options: ["Building social media", "Manipulating people to reveal info", "Network engineering", "Software development"], correct: 1 },
+        { question: "What tool automates SQL injection?", question_id: "Tool otomasi SQL injection?", options: ["Burp Suite", "SQLMap", "Nmap", "Nikto"], correct: 1 }
+    ],
+    excel: [
+        { question: "Which formula calculates the sum of A1 to A10?", question_id: "Formula untuk menjumlah A1 sampai A10?", options: ["=ADD(A1:A10)", "=SUM(A1:A10)", "=TOTAL(A1:A10)", "=PLUS(A1:A10)"], correct: 1 },
+        { question: "What does VLOOKUP do?", question_id: "Apa fungsi VLOOKUP?", options: ["Counts cells", "Looks up value in table vertically", "Creates charts", "Formats cells"], correct: 1 },
+        { question: "Shortcut to insert today's date?", question_id: "Shortcut untuk tanggal hari ini?", options: ["Ctrl+D", "Ctrl+;", "Ctrl+T", "Ctrl+N"], correct: 1 },
+        { question: "What is a Pivot Table used for?", question_id: "Pivot Table digunakan untuk?", options: ["Drawing shapes", "Summarizing large datasets", "Writing macros", "Sending emails"], correct: 1 },
+        { question: "Which makes a cell reference absolute?", question_id: "Yang membuat referensi sel absolut?", options: ["A1", "$A$1", "@A1", "#A1"], correct: 1 },
+        { question: "Formula to count cells with text?", question_id: "Formula menghitung sel berisi teks?", options: ["=COUNT()", "=COUNTA()", "=COUNTTEXT()", "=LEN()"], correct: 1 },
+        { question: "What does CONCATENATE/& do?", question_id: "Apa fungsi CONCATENATE/&?", options: ["Subtracts", "Joins text strings", "Counts characters", "Splits text"], correct: 1 },
+        { question: "Shortcut to toggle filters?", question_id: "Shortcut untuk toggle filter?", options: ["Ctrl+F", "Ctrl+Shift+L", "Ctrl+L", "Alt+F"], correct: 1 },
+        { question: "Which function finds the highest value?", question_id: "Fungsi untuk nilai tertinggi?", options: ["=HIGH()", "=MAX()", "=TOP()", "=LARGE()"], correct: 1 },
+        { question: "What is conditional formatting?", question_id: "Apa itu conditional formatting?", options: ["Formatting that changes based on rules", "Permanent cell coloring", "Chart creation", "Data sorting"], correct: 0 },
+        { question: "Formula for average of B1:B10?", question_id: "Formula rata-rata B1:B10?", options: ["=AVG(B1:B10)", "=AVERAGE(B1:B10)", "=MEAN(B1:B10)", "=MID(B1:B10)"], correct: 1 },
+        { question: "What does TRIM() do?", question_id: "Apa fungsi TRIM()?", options: ["Deletes cells", "Removes extra spaces", "Shortens text", "Trims numbers"], correct: 1 },
+        { question: "How to create a dropdown list?", question_id: "Cara membuat dropdown list?", options: ["Insert > List", "Data > Validation > List", "Format > Dropdown", "Home > List"], correct: 1 },
+        { question: "What does INDEX+MATCH replace?", question_id: "INDEX+MATCH menggantikan?", options: ["SUM", "VLOOKUP", "IF", "COUNT"], correct: 1 },
+        { question: "Shortcut to select entire column?", question_id: "Shortcut pilih seluruh kolom?", options: ["Ctrl+A", "Ctrl+Space", "Shift+Space", "Ctrl+Shift+End"], correct: 1 },
+        { question: "What is a Named Range?", question_id: "Apa itu Named Range?", options: ["A cell with a name tag", "A range given a custom name for formulas", "A column header", "A sheet name"], correct: 1 },
+        { question: "Which formula counts cells meeting criteria?", question_id: "Formula menghitung sel dengan kriteria?", options: ["=COUNT()", "=COUNTIF()", "=SUMIF()", "=FILTER()"], correct: 1 },
+        { question: "What does 'Freeze Panes' do?", question_id: "Apa fungsi 'Freeze Panes'?", options: ["Locks cells from editing", "Keeps rows/columns visible while scrolling", "Freezes file", "Prevents changes"], correct: 1 },
+        { question: "Formula to get current date and time?", question_id: "Formula tanggal dan waktu sekarang?", options: ["=TODAY()", "=NOW()", "=DATE()", "=TIME()"], correct: 1 },
+        { question: "What does =IF(A1>10,\"Yes\",\"No\") return if A1=5?", question_id: "Hasil =IF(A1>10,\"Yes\",\"No\") jika A1=5?", options: ["Yes", "No", "Error", "5"], correct: 1 }
     ]
 };
 
-// Mixed quiz combines questions from all categories
-quizData.mixed = [...quizData.english, ...quizData.coding, ...quizData.math];
+// Mixed quiz combines all categories
+quizData.mixed = [...quizData.english, ...quizData.coding, ...quizData.math, ...quizData.bughunter, ...quizData.excel];
