@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Machine - Your Smart Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>Learning Machine</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active" data-i18n="nav_home">Home</a></li>
+                <li><a href="#courses" class="nav-link" data-i18n="nav_courses">Courses</a></li>
+                <li><a href="#english" class="nav-link" data-i18n="nav_english">English</a></li>
+                <li><a href="#coding" class="nav-link" data-i18n="nav_coding">Coding</a></li>
+                <li><a href="#math" class="nav-link" data-i18n="nav_math">Math</a></li>
+                <li><a href="#quiz" class="nav-link" data-i18n="nav_quiz">Quiz</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-lang" id="lang-toggle" title="Switch Language">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">EN</span>
+                </button>
+                <button class="btn-theme" id="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero_title">Learn Anything,<br><span class="gradient-text">Anytime, Anywhere</span></h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Master English, Coding, Math and more with our interactive learning platform. Track your progress and achieve your goals.</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary" data-i18n="hero_start">Start Learning</a>
+                    <a href="#about" class="btn btn-outline" data-i18n="hero_explore">Explore Courses</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label" data-i18n="stat_lessons">Lessons</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label" data-i18n="stat_subjects">Subjects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label" data-i18n="stat_free">Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="floating-card card-1">
+                    <i class="fas fa-language"></i>
+                    <span>English</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-code"></i>
+                    <span>Coding</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-calculator"></i>
+                    <span>Math</span>
+                </div>
+                <div class="floating-card card-4">
+                    <i class="fas fa-brain"></i>
+                    <span>Logic</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Overview Section -->
+    <section class="section courses-section" id="courses">
+        <div class="container">
+            <h2 class="section-title" data-i18n="courses_title">Our Courses</h2>
+            <p class="section-subtitle" data-i18n="courses_subtitle">Choose your learning path and start your journey today</p>
+            <div class="courses-grid">
+                <div class="course-card" onclick="navigateTo('english')">
+                    <div class="course-icon english-icon"><i class="fas fa-language"></i></div>
+                    <h3 data-i18n="course_english_title">English</h3>
+                    <p data-i18n="course_english_desc">Learn vocabulary, grammar, conversation and more</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-book"></i> 15 <span data-i18n="lessons">Lessons</span></span>
+                        <span><i class="fas fa-clock"></i> 10h</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-english"></div></div>
+                </div>
+                <div class="course-card" onclick="navigateTo('coding')">
+                    <div class="course-icon coding-icon"><i class="fas fa-code"></i></div>
+                    <h3 data-i18n="course_coding_title">Coding</h3>
+                    <p data-i18n="course_coding_desc">HTML, CSS, JavaScript, Python fundamentals</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-book"></i> 20 <span data-i18n="lessons">Lessons</span></span>
+                        <span><i class="fas fa-clock"></i> 15h</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-coding"></div></div>
+                </div>
+                <div class="course-card" onclick="navigateTo('math')">
+                    <div class="course-icon math-icon"><i class="fas fa-calculator"></i></div>
+                    <h3 data-i18n="course_math_title">Mathematics</h3>
+                    <p data-i18n="course_math_desc">Algebra, geometry, statistics and problem solving</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-book"></i> 12 <span data-i18n="lessons">Lessons</span></span>
+                        <span><i class="fas fa-clock"></i> 8h</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-math"></div></div>
+                </div>
+                <div class="course-card" onclick="navigateTo('quiz')">
+                    <div class="course-icon quiz-icon"><i class="fas fa-brain"></i></div>
+                    <h3 data-i18n="course_quiz_title">Quiz & Practice</h3>
+                    <p data-i18n="course_quiz_desc">Test your knowledge with interactive quizzes</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-trophy"></i> 30 <span data-i18n="questions">Questions</span></span>
+                        <span><i class="fas fa-star"></i> Fun</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-quiz"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- English Learning Section -->
+    <section class="section learning-section" id="english">
+        <div class="container">
+            <h2 class="section-title" data-i18n="english_title">English Learning</h2>
+            <p class="section-subtitle" data-i18n="english_subtitle">Master English step by step</p>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="vocabulary" data-i18n="tab_vocab">Vocabulary</button>
+                <button class="tab-btn" data-tab="grammar" data-i18n="tab_grammar">Grammar</button>
+                <button class="tab-btn" data-tab="conversation" data-i18n="tab_conversation">Conversation</button>
+            </div>
+            <!-- Vocabulary Tab -->
+            <div class="tab-content active" id="tab-vocabulary">
+                <div class="vocab-grid">
+                    <div class="vocab-card" onclick="speakWord('Hello')">
+                        <div class="vocab-word">Hello</div>
+                        <div class="vocab-translation">Halo</div>
+                        <div class="vocab-example">"Hello, how are you?"</div>
+                        <i class="fas fa-volume-up vocab-speak"></i>
+                    </div>
+                    <div class="vocab-card" onclick="speakWord('Thank you')">
+                        <div class="vocab-word">Thank you</div>
+                        <div class="vocab-translation">Terima kasih</div>
+                        <div class="vocab-example">"Thank you very much!"</div>
+                        <i class="fas fa-volume-up vocab-speak"></i>
+                    </div>
+                    <div class="vocab-card" onclick="speakWord('Good morning')">
+                        <div class="vocab-word">Good morning</div>
+                        <div class="vocab-translation">Selamat pagi</div>
+                        <div class="vocab-example">"Good morning, teacher!"</div>
+                        <i class="fas fa-volume-up vocab-speak"></i>
+                    </div>
+                    <div class="vocab-card" onclick="speakWord('Excuse me')">
+                        <div class="vocab-word">Excuse me</div>
+                        <div class="vocab-translation">Permisi</div>
+                        <div class="vocab-example">"Excuse me, where is the library?"</div>
+                        <i class="fas fa-volume-up vocab-speak"></i>
+                    </div>
+                    <div class="vocab-card" onclick="speakWord('Beautiful')">
+                        <div class="vocab-word">Beautiful</div>
+                        <div class="vocab-translation">Cantik / Indah</div>
+                        <div class="vocab-example">"What a beautiful day!"</div>
+                        <i class="fas fa-volume-up vocab-speak"></i>
+                    </div>
+                    <div class="vocab-card" onclick="speakWord('Knowledge')">
+                        <div class="vocab-word">Knowledge</div>
+                        <div class="vocab-translation">Pengetahuan</div>
+                        <div class="vocab-example">"Knowledge is power."</div>
+                        <i class="fas fa-volume-up vocab-speak"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Grammar Tab -->
+            <div class="tab-content" id="tab-grammar">
+                <div class="grammar-lessons">
+                    <div class="grammar-card">
+                        <h4>Simple Present Tense</h4>
+                        <p data-i18n="grammar_present_desc">Used for habits, facts, and regular actions</p>
+                        <div class="grammar-example">
+                            <strong>Structure:</strong> Subject + Verb (s/es) + Object<br>
+                            <strong>Example:</strong> "She <em>reads</em> books every day."<br>
+                            <strong>Negative:</strong> "She <em>does not read</em> books."<br>
+                            <strong>Question:</strong> "<em>Does</em> she <em>read</em> books?"
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4>Simple Past Tense</h4>
+                        <p data-i18n="grammar_past_desc">Used for completed actions in the past</p>
+                        <div class="grammar-example">
+                            <strong>Structure:</strong> Subject + Verb (past form) + Object<br>
+                            <strong>Example:</strong> "I <em>visited</em> Jakarta last week."<br>
+                            <strong>Negative:</strong> "I <em>did not visit</em> Jakarta."<br>
+                            <strong>Question:</strong> "<em>Did</em> you <em>visit</em> Jakarta?"
+                        </div>
+                    </div>
+                    <div class="grammar-card">
+                        <h4>Present Continuous Tense</h4>
+                        <p data-i18n="grammar_continuous_desc">Used for actions happening right now</p>
+                        <div class="grammar-example">
+                            <strong>Structure:</strong> Subject + is/am/are + Verb-ing<br>
+                            <strong>Example:</strong> "They <em>are studying</em> English now."<br>
+                            <strong>Negative:</strong> "They <em>are not studying</em>."<br>
+                            <strong>Question:</strong> "<em>Are</em> they <em>studying</em>?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation Tab -->
+            <div class="tab-content" id="tab-conversation">
+                <div class="conversation-list">
+                    <div class="conversation-card">
+                        <h4><i class="fas fa-comments"></i> At the Restaurant</h4>
+                        <div class="dialogue">
+                            <div class="dialogue-line speaker-a"><strong>Waiter:</strong> Good evening! Can I help you?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> Yes, I'd like a table for two, please.</div>
+                            <div class="dialogue-line speaker-a"><strong>Waiter:</strong> Of course. Would you like to see the menu?</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> Yes, please. And can I have some water?</div>
+                        </div>
+                    </div>
+                    <div class="conversation-card">
+                        <h4><i class="fas fa-comments"></i> Asking for Directions</h4>
+                        <div class="dialogue">
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> Excuse me, how do I get to the train station?</div>
+                            <div class="dialogue-line speaker-a"><strong>Person:</strong> Go straight ahead, then turn left at the traffic light.</div>
+                            <div class="dialogue-line speaker-b"><strong>You:</strong> How far is it from here?</div>
+                            <div class="dialogue-line speaker-a"><strong>Person:</strong> About 10 minutes on foot.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coding Learning Section -->
+    <section class="section learning-section" id="coding">
+        <div class="container">
+            <h2 class="section-title" data-i18n="coding_title">Coding Learning</h2>
+            <p class="section-subtitle" data-i18n="coding_subtitle">Learn to code from scratch</p>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="html-css" data-i18n="tab_html">HTML & CSS</button>
+                <button class="tab-btn" data-tab="javascript" data-i18n="tab_js">JavaScript</button>
+                <button class="tab-btn" data-tab="python" data-i18n="tab_python">Python</button>
+            </div>
+            <!-- HTML & CSS Tab -->
+            <div class="tab-content active" id="tab-html-css">
+                <div class="code-lessons">
+                    <div class="code-card">
+                        <h4><i class="fas fa-code"></i> HTML Basics</h4>
+                        <p data-i18n="html_intro">HTML is the standard markup language for creating web pages.</p>
+                        <div class="code-block">
+                            <div class="code-header"><span>HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first website.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-palette"></i> CSS Styling</h4>
+                        <p data-i18n="css_intro">CSS is used to style and layout web pages.</p>
+                        <div class="code-block">
+                            <div class="code-header"><span>CSS</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- JavaScript Tab -->
+            <div class="tab-content" id="tab-javascript">
+                <div class="code-lessons">
+                    <div class="code-card">
+                        <h4><i class="fas fa-js"></i> Variables & Data Types</h4>
+                        <p data-i18n="js_vars_desc">JavaScript variables store data values.</p>
+                        <div class="code-block">
+                            <div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>// Variables
+let name = "John";
+const age = 25;
+let isStudent = true;
+
+// Arrays
+let fruits = ["Apple", "Banana", "Orange"];
+
+// Objects
+let person = {
+    name: "John",
+    age: 25,
+    city: "Jakarta"
+};
+
+console.log(person.name); // "John"</code></pre>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-cogs"></i> Functions</h4>
+                        <p data-i18n="js_func_desc">Functions are reusable blocks of code.</p>
+                        <div class="code-block">
+                            <div class="code-header"><span>JavaScript</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code>// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Arrow function
+const add = (a, b) => a + b;
+
+// Using functions
+console.log(greet("World")); // "Hello, World!"
+console.log(add(5, 3));      // 8</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Python Tab -->
+            <div class="tab-content" id="tab-python">
+                <div class="code-lessons">
+                    <div class="code-card">
+                        <h4><i class="fab fa-python"></i> Python Basics</h4>
+                        <p data-i18n="python_intro">Python is a beginner-friendly programming language.</p>
+                        <div class="code-block">
+                            <div class="code-header"><span>Python</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code># Variables
+name = "John"
+age = 25
+is_student = True
+
+# Lists
+fruits = ["Apple", "Banana", "Orange"]
+
+# Dictionary
+person = {
+    "name": "John",
+    "age": 25,
+    "city": "Jakarta"
+}
+
+print(f"Hello, {name}!")</code></pre>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <h4><i class="fas fa-repeat"></i> Loops & Conditions</h4>
+                        <p data-i18n="python_loops_desc">Control flow in Python.</p>
+                        <div class="code-block">
+                            <div class="code-header"><span>Python</span><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button></div>
+<pre><code># If-else condition
+score = 85
+if score >= 90:
+    print("Excellent!")
+elif score >= 70:
+    print("Good job!")
+else:
+    print("Keep trying!")
+
+# For loop
+for i in range(5):
+    print(f"Number: {i}")
+
+# While loop
+count = 0
+while count < 3:
+    print(f"Count: {count}")
+    count += 1</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Math Section -->
+    <section class="section learning-section" id="math">
+        <div class="container">
+            <h2 class="section-title" data-i18n="math_title">Mathematics</h2>
+            <p class="section-subtitle" data-i18n="math_subtitle">Build strong math foundations</p>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="algebra">Algebra</button>
+                <button class="tab-btn" data-tab="geometry" data-i18n="tab_geometry">Geometry</button>
+            </div>
+            <div class="tab-content active" id="tab-algebra">
+                <div class="math-lessons">
+                    <div class="math-card">
+                        <h4><i class="fas fa-superscript"></i> Linear Equations</h4>
+                        <p data-i18n="math_linear_desc">Solve equations with one variable</p>
+                        <div class="math-example">
+                            <div class="formula">2x + 5 = 15</div>
+                            <div class="steps">
+                                <p><strong>Step 1:</strong> 2x = 15 - 5</p>
+                                <p><strong>Step 2:</strong> 2x = 10</p>
+                                <p><strong>Step 3:</strong> x = 10 / 2</p>
+                                <p><strong>Answer:</strong> x = 5 ✓</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="math-card">
+                        <h4><i class="fas fa-square-root-variable"></i> Quadratic Equations</h4>
+                        <p data-i18n="math_quadratic_desc">Solve ax² + bx + c = 0</p>
+                        <div class="math-example">
+                            <div class="formula">x² - 5x + 6 = 0</div>
+                            <div class="steps">
+                                <p><strong>Method:</strong> Factoring</p>
+                                <p><strong>Step 1:</strong> (x - 2)(x - 3) = 0</p>
+                                <p><strong>Step 2:</strong> x - 2 = 0 or x - 3 = 0</p>
+                                <p><strong>Answer:</strong> x = 2 or x = 3 ✓</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-geometry">
+                <div class="math-lessons">
+                    <div class="math-card">
+                        <h4><i class="fas fa-shapes"></i> Area Formulas</h4>
+                        <p data-i18n="math_area_desc">Calculate areas of common shapes</p>
+                        <div class="math-example">
+                            <div class="formula-list">
+                                <p>▢ Rectangle: A = length × width</p>
+                                <p>△ Triangle: A = ½ × base × height</p>
+                                <p>○ Circle: A = π × r²</p>
+                                <p>▱ Trapezoid: A = ½ × (a + b) × h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="math-card">
+                        <h4><i class="fas fa-ruler-combined"></i> Pythagorean Theorem</h4>
+                        <p data-i18n="math_pythagoras_desc">For right triangles: a² + b² = c²</p>
+                        <div class="math-example">
+                            <div class="formula">a² + b² = c²</div>
+                            <div class="steps">
+                                <p><strong>Example:</strong> a = 3, b = 4, find c</p>
+                                <p><strong>Step 1:</strong> 3² + 4² = c²</p>
+                                <p><strong>Step 2:</strong> 9 + 16 = c²</p>
+                                <p><strong>Step 3:</strong> c² = 25</p>
+                                <p><strong>Answer:</strong> c = 5 ✓</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="section quiz-section" id="quiz">
+        <div class="container">
+            <h2 class="section-title" data-i18n="quiz_title">Quiz & Practice</h2>
+            <p class="section-subtitle" data-i18n="quiz_subtitle">Test your knowledge</p>
+            <div class="quiz-container" id="quiz-container">
+                <div class="quiz-header">
+                    <div class="quiz-progress">
+                        <span data-i18n="quiz_question">Question</span> <span id="quiz-current">1</span>/<span id="quiz-total">10</span>
+                    </div>
+                    <div class="quiz-score">
+                        <i class="fas fa-star"></i> <span data-i18n="quiz_score">Score</span>: <span id="quiz-score">0</span>
+                    </div>
+                </div>
+                <div class="quiz-category-select" id="quiz-category-select">
+                    <h3 data-i18n="quiz_choose_category">Choose a Category</h3>
+                    <div class="quiz-categories">
+                        <button class="quiz-cat-btn" onclick="startQuiz('english')">
+                            <i class="fas fa-language"></i>
+                            <span>English</span>
+                        </button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('coding')">
+                            <i class="fas fa-code"></i>
+                            <span>Coding</span>
+                        </button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('math')">
+                            <i class="fas fa-calculator"></i>
+                            <span>Math</span>
+                        </button>
+                        <button class="quiz-cat-btn" onclick="startQuiz('mixed')">
+                            <i class="fas fa-random"></i>
+                            <span>Mixed</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="quiz-body" id="quiz-body" style="display:none;">
+                    <div class="quiz-question" id="quiz-question"></div>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <div class="quiz-feedback" id="quiz-feedback"></div>
+                    <button class="btn btn-primary quiz-next" id="quiz-next" onclick="nextQuestion()" style="display:none;" data-i18n="quiz_next">Next Question</button>
+                </div>
+                <div class="quiz-result" id="quiz-result" style="display:none;">
+                    <div class="result-icon"><i class="fas fa-trophy"></i></div>
+                    <h3 data-i18n="quiz_complete">Quiz Complete!</h3>
+                    <p class="result-score" id="result-score"></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" data-i18n="quiz_retry">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <i class="fas fa-robot"></i>
+                        <span>Learning Machine</span>
+                    </div>
+                    <p data-i18n="footer_desc">Your smart learning companion for mastering new skills.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_courses">Courses</h4>
+                    <a href="#english" data-i18n="nav_english">English</a>
+                    <a href="#coding" data-i18n="nav_coding">Coding</a>
+                    <a href="#math" data-i18n="nav_math">Math</a>
+                    <a href="#quiz" data-i18n="nav_quiz">Quiz</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_features">Features</h4>
+                    <a href="#" data-i18n="footer_progress">Progress Tracking</a>
+                    <a href="#" data-i18n="footer_bilingual">Bilingual Support</a>
+                    <a href="#" data-i18n="footer_interactive">Interactive Quizzes</a>
+                    <a href="#" data-i18n="footer_dark">Dark Mode</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Learning Machine. Made with <i class="fas fa-heart"></i> for learners everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/quiz-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
