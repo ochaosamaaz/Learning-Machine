@@ -27,6 +27,7 @@
                 <li><a href="#home" class="nav-link active" data-i18n="nav_home">Home</a></li>
                 <li><a href="#courses" class="nav-link" data-i18n="nav_courses">Courses</a></li>
                 <li><a href="#english" class="nav-link" data-i18n="nav_english">English</a></li>
+                <li><a href="#speaking" class="nav-link">Speaking</a></li>
                 <li><a href="#coding" class="nav-link" data-i18n="nav_coding">Coding</a></li>
                 <li><a href="#bughunter" class="nav-link" data-i18n="nav_bughunter">Bug Hunter</a></li>
                 <li><a href="#excel" class="nav-link" data-i18n="nav_excel">Excel</a></li>
@@ -1421,6 +1422,50 @@ Custom Formula Rules:
     </section>
 
 
+    <!-- Speaking Practice Section -->
+    <section class="section learning-section" id="speaking">
+        <div class="container">
+            <h2 class="section-title">Speaking Practice</h2>
+            <p class="section-subtitle">Practice your English speaking with AI conversation partner</p>
+
+            <!-- Repeat After Me -->
+            <div id="speaking-repeat">
+                <h3 class="speaking-section-title"><i class="fas fa-redo"></i> Repeat After Me</h3>
+                <p class="speaking-section-desc">Listen to the phrase, then record yourself saying it. Get instant pronunciation feedback!</p>
+                <div id="repeat-content"></div>
+                <button class="btn btn-outline btn-sm" onclick="startRepeatMode()" style="margin-top:15px;"><i class="fas fa-random"></i> New Phrase</button>
+            </div>
+
+            <!-- Scenario Selection -->
+            <h3 class="speaking-section-title" style="margin-top:50px;"><i class="fas fa-comments"></i> Conversation Practice</h3>
+            <p class="speaking-section-desc">Choose a scenario and have a real conversation! Speak into your microphone to respond.</p>
+            <div class="speaking-scenarios-grid" id="speaking-scenarios"></div>
+
+            <!-- Chat UI (hidden initially) -->
+            <div id="speaking-chat" style="display:none;">
+                <div class="speaking-chat-container">
+                    <div class="speaking-chat-header">
+                        <button class="btn-back" onclick="backToSpeakingMenu()"><i class="fas fa-arrow-left"></i></button>
+                        <h4 id="speaking-chat-title">Conversation</h4>
+                    </div>
+                    <div class="speaking-messages" id="speaking-messages"></div>
+                    <div class="speaking-input-area">
+                        <button class="speaking-mic-btn" id="speaking-mic-btn" style="display:none;">
+                            <i class="fas fa-microphone"></i> Tap to Speak
+                        </button>
+                    </div>
+                    <div id="speaking-result" style="display:none;"></div>
+                </div>
+            </div>
+
+            <!-- Browser Support Note -->
+            <div class="speaking-note">
+                <i class="fas fa-info-circle"></i>
+                <span>Speech Recognition works best in <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong>. Make sure to allow microphone access.</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Gamification Bar -->
     <div class="gamification-bar" id="gamification-bar">
         <div class="gam-item"><i class="fas fa-fire"></i> <span id="streak-text">0 days</span></div>
@@ -1644,6 +1689,7 @@ Custom Formula Rules:
     <script src="js/app.js"></script>
     <script src="js/features.js"></script>
     <script src="js/playground.js"></script>
+    <script src="js/speaking.js"></script>
     <script>
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
